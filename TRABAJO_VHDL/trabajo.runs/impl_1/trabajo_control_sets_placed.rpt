@@ -1,0 +1,179 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Jan 16 15:00:06 2020
+| Host         : LAPTOP-CG3U7DTI running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file trabajo_control_sets_placed.rpt
+| Design       : trabajo
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   101 |
+|    Minimum number of control sets                        |   101 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   703 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   101 |
+| >= 0 to < 4        |    99 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     1 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               4 |            3 |
+| No           | No                    | Yes                    |              66 |           66 |
+| No           | Yes                   | No                     |              59 |           40 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------------------+---------------+-------------------------------------------------------+------------------+----------------+
+|                      Clock Signal                      | Enable Signal |                    Set/Reset Signal                   | Slice Load Count | Bel Load Count |
++--------------------------------------------------------+---------------+-------------------------------------------------------+------------------+----------------+
+|  MAQUINA_SEMAFORO_CRUCE/count[16]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[16]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[17]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[17]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[14]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[14]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[13]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[13]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[11]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[11]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[18]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[18]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[0]_LDC_i_1_n_0           |               | MAQUINA_SEMAFORO_CRUCE/count[0]_LDC_i_2_n_0           |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[15]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[15]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[10]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[10]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[12]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[12]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[28]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[28]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[21]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[21]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[20]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[20]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[22]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[22]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[1]_LDC_i_1_n_0           |               | MAQUINA_SEMAFORO_CRUCE/count[1]_LDC_i_2_n_0           |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[26]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[26]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[24]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[24]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[23]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[23]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[27]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[27]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[25]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[25]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[19]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[19]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[2]_LDC_i_1_n_0           |               | MAQUINA_SEMAFORO_CRUCE/count[2]_LDC_i_2_n_0           |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[7]_LDC_i_1_n_0           |               | MAQUINA_SEMAFORO_CRUCE/count[7]_LDC_i_2_n_0           |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[31]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[31]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[4]_LDC_i_1_n_0           |               | MAQUINA_SEMAFORO_CRUCE/count[4]_LDC_i_2_n_0           |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[5]_LDC_i_1_n_0           |               | MAQUINA_SEMAFORO_CRUCE/count[5]_LDC_i_2_n_0           |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[6]_LDC_i_1_n_0           |               | MAQUINA_SEMAFORO_CRUCE/count[6]_LDC_i_2_n_0           |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[29]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[29]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[30]_LDC_i_1_n_0          |               | MAQUINA_SEMAFORO_CRUCE/count[30]_LDC_i_2_n_0          |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[3]_LDC_i_1_n_0           |               | MAQUINA_SEMAFORO_CRUCE/count[3]_LDC_i_2_n_0           |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/nextstate_cruce[0]_LDC_i_1_n_0 |               | MAQUINA_SEMAFORO_CRUCE/nextstate_cruce[0]_LDC_i_2_n_0 |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[8]_LDC_i_1_n_0           |               | MAQUINA_SEMAFORO_CRUCE/count[8]_LDC_i_2_n_0           |                1 |              1 |
+|  MAQUINA_SEMAFORO_CRUCE/count[9]_LDC_i_1_n_0           |               | MAQUINA_SEMAFORO_CRUCE/count[9]_LDC_i_2_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[8]_LDC_i_2_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[9]_LDC_i_1_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[16]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[16]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[13]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[17]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[10]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[14]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[17]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[13]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[0]_LDC_i_2_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[11]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[18]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[18]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[0]_LDC_i_1_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[15]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[15]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[12]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[11]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[10]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[12]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[14]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[28]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[1]_LDC_i_2_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[21]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[20]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[23]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[21]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[25]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[22]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[26]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[22]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[19]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[1]_LDC_i_1_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[26]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[24]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[23]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[27]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[27]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[25]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[24]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[28]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[19]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[20]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[2]_LDC_i_2_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[2]_LDC_i_1_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[7]_LDC_i_1_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[6]_LDC_i_2_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[30]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[3]_LDC_i_2_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[5]_LDC_i_2_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[31]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[4]_LDC_i_1_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[5]_LDC_i_1_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[4]_LDC_i_2_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[6]_LDC_i_1_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[29]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[29]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[30]_LDC_i_1_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[31]_LDC_i_2_n_0          |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[3]_LDC_i_1_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/nextstate_cruce[0]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[9]_LDC_i_2_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[7]_LDC_i_2_n_0           |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/Sem2_OBUF[0]                   |                1 |              1 |
+|  clk_state_BUFG                                        |               | MAQUINA_SEMAFORO_CRUCE/count[8]_LDC_i_1_n_0           |                1 |              1 |
+|  clk_IBUF_BUFG                                         |               |                                                       |                3 |              4 |
+|  clk_IBUF_BUFG                                         |               | MAQUINA_SEMAFORO_CRUCE/TIMER/clear                    |                7 |             26 |
++--------------------------------------------------------+---------------+-------------------------------------------------------+------------------+----------------+
+
+

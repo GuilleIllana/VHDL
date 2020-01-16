@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/UNIVERSIDAD/CUARTO/PRIMER SEMESTRE/SIST. ELECTRNICOS DIGITALES/PRCTICAS/trabajo/trabajo.sim/sim_1/impl/timing/xsim/trabajo_tb_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divisor_frecuencia
+INFO: [VRFC 10-311] analyzing module maquina_cruce
+INFO: [VRFC 10-311] analyzing module maquina_paso
+INFO: [VRFC 10-311] analyzing module trabajo
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/UNIVERSIDAD/CUARTO/PRIMER SEMESTRE/SIST. ELECTRNICOS DIGITALES/PRCTICAS/trabajo/trabajo.srcs/sim_1/new/trabajo_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'trabajo_tb'

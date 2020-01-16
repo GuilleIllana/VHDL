@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"trabajo_tb_func_impl.vhd" \
+"../../../../../trabajo.srcs/sim_1/new/trabajo_tb.vhd" \
+
+# Do not sort compile order
+nosort
