@@ -42,8 +42,6 @@ entity maquina_paso is
         Sem_peatones: out STD_LOGIC_VECTOR (1 downto 0);
         
         --ELEMENTOS NECESARIOS PARA EL FUNCIONAMIENTO DE LA CUENTA ATRÁS
-        --clk500Hz: in STD_LOGIC;
-        --clk1Hz: inout STD_LOGIC;
         display: out STD_LOGIC_VECTOR (6 downto 0)
         
   );
@@ -69,7 +67,7 @@ component divisor_frecuencia
 end component;
 
 --señales y constantes necesariaspara los temporizadores y cuantas atrás síncronas
-constant prescaler_module: positive :=  100000000 / 1; -- 100MHz -> 10Hz
+constant module: positive :=  100000000 / 10000000; -- 100MHz -> 1Hz
 
 
 --Declaración componente decodificador 7 segmentos
@@ -84,9 +82,9 @@ signal code: std_logic_vector(3 downto 0) := "0000";
 
 begin
 
-PRESCALER: divisor_frecuencia
+TIMER: divisor_frecuencia
     generic map (
-      MODULE => prescaler_module
+      MODULE => module
     )
     port map (
       CLK_IN  => clk,

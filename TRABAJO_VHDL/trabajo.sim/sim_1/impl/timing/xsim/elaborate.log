@@ -3,5 +3,5 @@ Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
 Running: D:/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 1c6fd47309f34058825c98471d1a33b6 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot trabajo_tb_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.trabajo_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-ERROR: [VRFC 10-1360] signal cannot be unconstrained [D:/UNIVERSIDAD/CUARTO/PRIMER SEMESTRE/SIST. ELECTRNICOS DIGITALES/PRCTICAS/trabajo/trabajo.srcs/sim_1/new/trabajo_tb.vhd:56]
+ERROR: [VRFC 10-1360] signal cannot be unconstrained [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sim_1/new/trabajo_tb.vhd:56]
 ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

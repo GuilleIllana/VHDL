@@ -1,0 +1,437 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 504
+License: Customer
+
+Current time: 	Thu Jan 16 20:50:51 CET 2020
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1366x768
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 45 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	D:/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Aitana
+User home directory: C:/Users/Aitana
+User working directory: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL
+User country: 	ES
+User language: 	es
+User locale: 	es_ES
+
+RDI_BASEROOT: D:/Vivado
+HDI_APPROOT: D:/Vivado/2019.1
+RDI_DATADIR: D:/Vivado/2019.1/data
+RDI_BINDIR: D:/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/Aitana/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/Aitana/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/Aitana/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	D:/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/vivado.log
+Vivado journal file location: 	C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/vivado.jou
+Engine tmp dir: 	C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/.Xil/Vivado-504-LAPTOP-CG3U7DTI
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: D:/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Vivado/2019.1
+XILINX_SDK: D:/SDK/2019.1
+XILINX_VIVADO: D:/Vivado/2019.1
+XILINX_VIVADO_HLS: D:/Vivado/2019.1
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 572 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Aitana\Desktop\trabajo_vhdl\VHDL\TRABAJO_VHDL\trabajo.xpr. Version: Vivado v2019.1 
+// Tcl Message: open_project C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.xpr 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 572 MB. GUI used memory: 44 MB. Current time: 1/16/20, 8:50:53 PM CET
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/guill/Documents/SED/TRABAJO_VHDL' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2019.1/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 66 MB (+67129kb) [00:00:36]
+// [Engine Memory]: 636 MB (+515828kb) [00:00:36]
+// [GUI Memory]: 83 MB (+13658kb) [00:00:36]
+// WARNING: HEventQueue.dispatchEvent() is taking  5720 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 665 MB. GUI used memory: 50 MB. Current time: 1/16/20, 8:51:11 PM CET
+// Tcl Message: open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 695.867 ; gain = 84.355 
+// [Engine Memory]: 679 MB (+10878kb) [00:00:40]
+// Project name: trabajo; location: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL; part: xc7a100tcsg324-1
+// [GUI Memory]: 92 MB (+5246kb) [00:00:40]
+dismissDialog("Open Project"); // by (cl)
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 46 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, trabajo(Behavioral) (trabajo.vhd)]", 1); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, trabajo(Behavioral) (trabajo.vhd), MAQUINA_SEMAFORO_PASO : maquina_paso(Behavioral) (maquina_paso.vhd)]", 3); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, trabajo(Behavioral) (trabajo.vhd), MAQUINA_SEMAFORO_CRUCE : maquina_cruce(Behavioral) (maquina_cruce.vhd)]", 2); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 8); // B (F, cl)
+// PAPropertyPanels.initPanels (trabajo_tb.vhd) elapsed time: 0.4s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, trabajo_tb(Behavioral) (trabajo_tb.vhd)]", 10, true); // B (F, cl) - Node
+// [GUI Memory]: 101 MB (+4737kb) [00:01:43]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, trabajo_tb(Behavioral) (trabajo_tb.vhd)]", 10, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// Elapsed time: 111 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES, "Add or create simulation sources"); // a (o, c)
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+// HMemoryUtils.trashcanNow. Engine heap size: 708 MB. GUI used memory: 54 MB. Current time: 1/16/20, 8:54:18 PM CET
+setFileChooser("C:/Users/Aitana/Desktop/SimDIVISOR.vhd");
+// Elapsed time: 12 seconds
+selectButton("BACK", "< Back"); // JButton (j, c)
+selectButton("NEXT", "Next >"); // JButton (j, c)
+// 'h' command handler elapsed time: 38 seconds
+// Elapsed time: 10 seconds
+dismissDialog("Add Sources"); // c (cl)
+// Elapsed time: 28 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 202ms to process. Increasing delay to 2000 ms.
+// Elapsed time: 26 seconds
+setFileChooser("C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sim_1/new/SimDIVISOR.vhd");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 35 seconds
+dismissDialog("Add Sources"); // c (cl)
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// by (cl):  Add Simulation Sources  : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset sim_1 -norecurse C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sim_1/new/SimDIVISOR.vhd 
+dismissDialog("Add Simulation Sources"); // by (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, test(testbench) (SimDIVISOR.vhd)]", 11, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, test(testbench) (SimDIVISOR.vhd)]", 11, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// Elapsed time: 26 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "trabajo_tb.vhd", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cl)
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SimDIVISOR.vhd", 1); // k (j, cl)
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 208ms to process. Increasing delay to 2000 ms.
+// [GUI Memory]: 106 MB (+141kb) [00:09:34]
+// Elapsed time: 216 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, trabajo(Behavioral) (trabajo.vhd), MAQUINA_SEMAFORO_PASO : maquina_paso(Behavioral) (maquina_paso.vhd), PRESCALER : divisor_frecuencia(Behavioral) (divisor_frecuencia.vhd)]", 5, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, trabajo(Behavioral) (trabajo.vhd), MAQUINA_SEMAFORO_PASO : maquina_paso(Behavioral) (maquina_paso.vhd), PRESCALER : divisor_frecuencia(Behavioral) (divisor_frecuencia.vhd)]", 5, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, trabajo(Behavioral) (trabajo.vhd), MAQUINA_SEMAFORO_PASO : maquina_paso(Behavioral) (maquina_paso.vhd), PRESCALER : divisor_frecuencia(Behavioral) (divisor_frecuencia.vhd)]", 5, false, false, false, false, false, true); // B (F, cl) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 730 MB. GUI used memory: 54 MB. Current time: 1/16/20, 9:00:13 PM CET
+// [Engine Memory]: 730 MB (+18101kb) [00:09:43]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, trabajo(Behavioral) (trabajo.vhd), MAQUINA_SEMAFORO_PASO : maquina_paso(Behavioral) (maquina_paso.vhd)]", 4, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, trabajo(Behavioral) (trabajo.vhd), MAQUINA_SEMAFORO_PASO : maquina_paso(Behavioral) (maquina_paso.vhd)]", 4, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectCodeEditor("maquina_paso.vhd", 260, 145); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("maquina_paso.vhd", 492, 17); // cl (w, cl)
+selectCodeEditor("maquina_paso.vhd", 489, 9); // cl (w, cl)
+selectCodeEditor("maquina_paso.vhd", 66, 72); // cl (w, cl)
+selectCodeEditor("maquina_paso.vhd", 135, 29); // cl (w, cl)
+// WARNING: HEventQueue.dispatchEvent() is taking  1078 ms.
+selectCodeEditor("maquina_paso.vhd", 303, 28); // cl (w, cl)
+selectCodeEditor("maquina_paso.vhd", 180, 43); // cl (w, cl)
+// Elapsed time: 31 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 307 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+dismissDialog("Create Source File"); // F (c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+setFileChooser("C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sim_1/new/simALL.vhd");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 12 seconds
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Add Sources"); // c (cl)
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset sim_1 -norecurse C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sim_1/new/simALL.vhd 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, simALL(Behavioral) (simALL.vhd)]", 9, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, simALL(Behavioral) (simALL.vhd)]", 9, true, false, false, false, true, false); // B (F, cl) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, simALL(Behavioral) (simALL.vhd)]", 9); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, simALL(Behavioral) (simALL.vhd)]", 9, true); // B (F, cl) - Node
+// [GUI Memory]: 114 MB (+2463kb) [00:16:46]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, simALL(Behavioral) (simALL.vhd)]", 9, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectCodeEditor("simALL.vhd", 52, 137); // cl (w, cl)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("simALL.vhd", 4, 400); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "maquina_paso.vhd", 3); // k (j, cl)
+selectCodeEditor("maquina_paso.vhd", 271, 230); // cl (w, cl)
+// Elapsed time: 97 seconds
+selectCodeEditor("maquina_paso.vhd", 297, 235); // cl (w, cl)
+// Elapsed time: 90 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cl)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_POST_IMPLEMENTATION_TIMING, "Run Post-Implementation Timing Simulation"); // ah (an, cl)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_POST_IMPLEMENTATION_TIMING
+// TclEventType: FILE_SET_CHANGE
+// al (cl): Save Project: addNotify
+selectButton("OptionPane.button", "Yes"); // JButton (A, G)
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (al)
+// by (cl):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// e (cl):  Run Simulation : addNotify
+dismissDialog("Save Project"); // al (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// HMemoryUtils.trashcanNow. Engine heap size: 764 MB. GUI used memory: 57 MB. Current time: 1/16/20, 9:11:18 PM CET
+// Tcl Message: launch_simulation -mode post-implementation -type timing 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [Vivado 12-5682] Launching post-implementation timing simulation in 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.sim/sim_1/impl/timing/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-20] The target language is set to VHDL, it is not supported for simulation type 'timing', using Verilog instead. 
+// [Engine Memory]: 1,060 MB (+307969kb) [00:20:54]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,122 MB. GUI used memory: 57 MB. Current time: 1/16/20, 9:11:38 PM CET
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 1,581 MB (+490647kb) [00:21:15]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,581 MB. GUI used memory: 57 MB. Current time: 1/16/20, 9:11:46 PM CET
+// [Engine Memory]: 1,690 MB (+31428kb) [00:21:17]
+// Xgd.load filename: D:/Vivado/2019.1/data/parts/xilinx/artix7/devint/artix7/xc7a100t/xc7a100t.xgd; ZipEntry: xc7a100t_detail.xgd elapsed time: 0.5s
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [GUI Memory]: 128 MB (+9150kb) [00:21:19]
+// Package: addNotify
+// Device: addNotify
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  5285 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a100tcsg324-1 INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2019.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.325 . Memory (MB): peak = 1652.203 ; gain = 0.000 
+// Tcl Message: Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.335 . Memory (MB): peak = 1652.203 ; gain = 0.000 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1652.203 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: open_run: Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 1817.352 ; gain = 1035.879 
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.sim/sim_1/impl/timing/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj trabajo_tb_vlog.prj" 
+// Tcl Message: INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.sim/sim_1/impl/timing/xsim/trabajo_tb_time_impl.v" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module divisor_frecuencia INFO: [VRFC 10-311] analyzing module maquina_cruce INFO: [VRFC 10-311] analyzing module maquina_paso INFO: [VRFC 10-311] analyzing module trabajo INFO: [VRFC 10-311] analyzing module glbl "xvhdl --incr --relax -prj trabajo_tb_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sim_1/new/trabajo_tb.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'trabajo_tb' 
+// Tcl Message: run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1839.598 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '8' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.sim/sim_1/impl/timing/xsim' 
+// Tcl Message: "xelab -wto 1c6fd47309f34058825c98471d1a33b6 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot trabajo_tb_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.trabajo_tb xil_defaultlib.glbl -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds INFO: [USF-XSim-99] Step results log file:'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.sim/sim_1/impl/timing/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.sim/sim_1/impl/timing/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:45 ; elapsed = 00:00:52 . Memory (MB): peak = 1839.598 ; gain = 1058.125 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 63 seconds
+// Elapsed time: 58 seconds
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+// a (cl): Critical Messages: addNotify
+// [GUI Memory]: 141 MB (+6567kb) [00:21:45]
+selectList(PAResourceAtoD.CmdMsgDialog_MESSAGES, "[USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.sim/sim_1/impl/timing/xsim/elaborate.log' file for more information.", 0); // b (F, a)
+selectList(PAResourceAtoD.CmdMsgDialog_MESSAGES, "[USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.sim/sim_1/impl/timing/xsim/elaborate.log' file for more information.", 0, false, false, false, false, true); // b (F, a) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Critical Messages"); // a (cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, impl_1, General Messages, [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.sim/sim_1/impl/timing/xsim/elaborate.log' file for more information.. ]", 5, false); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, impl_1, General Messages, [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.. ]", 6, false); // ah (O, cl)
+// [Engine Memory]: 2,012 MB (+248725kb) [00:21:55]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,012 MB. GUI used memory: 87 MB. Current time: 1/16/20, 9:12:29 PM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  1128 ms.
+// Elapsed time: 94 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "SimDIVISOR.vhd", 3); // k (j, cl)
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aK (aH, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, test(testbench) (SimDIVISOR.vhd)]", 10); // B (F, cl)
+// Elapsed time: 84 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, simALL(Behavioral) (simALL.vhd)]", 9, true, false, false, false, true, false); // B (F, cl) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+// Elapsed time: 53 seconds
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, Popup.HeavyWeightWindow)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, simALL(Behavioral) (simALL.vhd)]", 9, true, false, false, false, true, false); // B (F, cl) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, simALL(Behavioral) (simALL.vhd)]", 9, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, simALL(Behavioral) (simALL.vhd)]", 9, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, simALL(Behavioral) (simALL.vhd)]", 9, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, simALL(Behavioral) (simALL.vhd)]", 9, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, simALL(Behavioral) (simALL.vhd)]", 9, true); // B (F, cl) - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "simALL.vhd", 6); // k (j, cl)
+// Elapsed time: 96 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, simALL(Behavioral) (simALL.vhd)]", 9, true, false, false, false, true, false); // B (F, cl) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cl)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cl): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+// Elapsed time: 12 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "simMaquinaCruce"); // Y (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 25 seconds
+dismissDialog("Add Sources"); // c (cl)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// Tcl Message: close [ open C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sim_1/new/simMaquinaCruce.vhd w ] 
+// TclEventType: DG_GRAPH_STALE
+// by (cl):  Add Simulation Sources  : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset sim_1 C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sim_1/new/simMaquinaCruce.vhd 
+// I (cl): Define Module: addNotify
+dismissDialog("Add Simulation Sources"); // by (cl)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+// Elapsed time: 14 seconds
+selectCodeEditor("simALL.vhd", 2, 109); // cl (w, cl)
+// Elapsed time: 12 seconds
+typeControlKey((HResource) null, "simALL.vhd", 'c'); // cl (w, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, simMaquinaCruce(Behavioral) (simMaquinaCruce.vhd)]", 11, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, simMaquinaCruce(Behavioral) (simMaquinaCruce.vhd)]", 11, false, false, false, false, false, true); // B (F, cl) - Double Click
+// Elapsed time: 13 seconds
+selectCodeEditor("simMaquinaCruce.vhd", 18, 131); // cl (w, cl)
+typeControlKey((HResource) null, "simMaquinaCruce.vhd", 'v'); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 160, 153); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 160, 153); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 160, 150); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 84, 107); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 346, 110); // cl (w, cl)
+typeControlKey((HResource) null, "simMaquinaCruce.vhd", 'c'); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 360, 104); // cl (w, cl)
+typeControlKey((HResource) null, "simMaquinaCruce.vhd", 'v'); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 82, 125); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 421, 146); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 360, 47); // cl (w, cl)
+// Elapsed time: 10 seconds
+selectCodeEditor("simMaquinaCruce.vhd", 115, 98); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 165, 108); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 117, 98); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 415, 113); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 361, 59); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 359, 29); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 139, 43); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 57, 55); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 119, 78); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 168, 78); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 159, 100); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 64, 112); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 68, 42); // cl (w, cl)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("simMaquinaCruce.vhd", 87, 41); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 132, 40); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 112, 79); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 90, 24); // cl (w, cl)
+// Elapsed time: 12 seconds
+selectCodeEditor("simMaquinaCruce.vhd", 53, 112); // cl (w, cl)
+typeControlKey((HResource) null, "simMaquinaCruce.vhd", 'c'); // cl (w, cl)
+selectCodeEditor("simMaquinaCruce.vhd", 84, 167); // cl (w, cl)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE

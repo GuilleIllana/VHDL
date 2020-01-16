@@ -1,11 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Thu Jan 16 15:04:26 2020
+// Date        : Thu Jan 16 21:11:56 2020
 // Host        : LAPTOP-CG3U7DTI running 64-bit major release  (build 9200)
-// Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file {D:/UNIVERSIDAD/CUARTO/PRIMER
-//               SEMESTRE/SIST. ELECTRNICOS
-//               DIGITALES/PRCTICAS/trabajo/trabajo.sim/sim_1/impl/timing/xsim/trabajo_tb_time_impl.v}
+// Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file
+//               C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.sim/sim_1/impl/timing/xsim/trabajo_tb_time_impl.v
 // Design      : trabajo
 // Purpose     : This verilog netlist is a timing simulation representation of the design and should not be modified or
 //               synthesized. Please ensure that this netlist is used with the corresponding SDF file.

@@ -2,15 +2,24 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Jan 16 18:53:57 2020
-# Process ID: 7192
-# Current directory: C:/Users/guill/Documents/SED/TRABAJO_VHDL
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10500 C:\Users\guill\Documents\SED\TRABAJO_VHDL\trabajo.xpr
-# Log file: C:/Users/guill/Documents/SED/TRABAJO_VHDL/vivado.log
-# Journal file: C:/Users/guill/Documents/SED/TRABAJO_VHDL\vivado.jou
+# Start of session at: Thu Jan 16 20:50:09 2020
+# Process ID: 504
+# Current directory: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17932 C:\Users\Aitana\Desktop\trabajo_vhdl\VHDL\TRABAJO_VHDL\trabajo.xpr
+# Log file: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/vivado.log
+# Journal file: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/guill/Documents/SED/TRABAJO_VHDL/trabajo.xpr
+open_project C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.xpr
 update_compile_order -fileset sources_1
-update_files -from_files C:/Users/guill/Documents/SED/TRABAJO_VHDL/Nexys4DDR_Master.xdc -to_files C:/Users/guill/Documents/SED/Nexys4DDR_Master.xdc -filesets [get_filesets *]
-set_property target_constrs_file C:/Users/guill/Documents/SED/TRABAJO_VHDL/Nexys4DDR_Master.xdc [current_fileset -constrset]
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sim_1/new/SimDIVISOR.vhd
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sim_1/new/simALL.vhd
+update_compile_order -fileset sim_1
+launch_simulation -mode post-implementation -type timing
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sim_1/new/simMaquinaCruce.vhd w ]
+add_files -fileset sim_1 C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sim_1/new/simMaquinaCruce.vhd
+update_compile_order -fileset sim_1
