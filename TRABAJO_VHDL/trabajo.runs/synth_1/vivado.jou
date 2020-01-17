@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Jan 16 14:58:29 2020
-# Process ID: 8580
-# Current directory: D:/UNIVERSIDAD/CUARTO/PRIMER SEMESTRE/SIST. ELECTRNICOS DIGITALES/PRCTICAS/trabajo/trabajo.runs/synth_1
+# Start of session at: Fri Jan 17 01:44:46 2020
+# Process ID: 14460
+# Current directory: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.runs/synth_1
 # Command line: vivado.exe -log trabajo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source trabajo.tcl
-# Log file: D:/UNIVERSIDAD/CUARTO/PRIMER SEMESTRE/SIST. ELECTRNICOS DIGITALES/PRCTICAS/trabajo/trabajo.runs/synth_1/trabajo.vds
-# Journal file: D:/UNIVERSIDAD/CUARTO/PRIMER SEMESTRE/SIST. ELECTRNICOS DIGITALES/PRCTICAS/trabajo/trabajo.runs/synth_1\vivado.jou
+# Log file: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.runs/synth_1/trabajo.vds
+# Journal file: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source trabajo.tcl -notrace

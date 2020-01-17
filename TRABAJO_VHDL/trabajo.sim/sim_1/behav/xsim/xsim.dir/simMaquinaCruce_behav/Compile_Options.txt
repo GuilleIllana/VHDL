@@ -1,0 +1,1 @@
+-wto "1c6fd47309f34058825c98471d1a33b6" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "simMaquinaCruce_behav" "xil_defaultlib.simMaquinaCruce" -log "elaborate.log" 

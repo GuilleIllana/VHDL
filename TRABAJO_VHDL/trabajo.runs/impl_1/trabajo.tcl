@@ -70,12 +70,12 @@ set rc [catch {
   set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {D:/UNIVERSIDAD/CUARTO/PRIMER SEMESTRE/SIST. ELECTRNICOS DIGITALES/PRCTICAS/trabajo/trabajo.cache/wt} [current_project]
-  set_property parent.project_path {D:/UNIVERSIDAD/CUARTO/PRIMER SEMESTRE/SIST. ELECTRNICOS DIGITALES/PRCTICAS/trabajo/trabajo.xpr} [current_project]
-  set_property ip_output_repo {{D:/UNIVERSIDAD/CUARTO/PRIMER SEMESTRE/SIST. ELECTRNICOS DIGITALES/PRCTICAS/trabajo/trabajo.cache/ip}} [current_project]
+  set_property webtalk.parent_dir C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.xpr [current_project]
+  set_property ip_output_repo C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet {{D:/UNIVERSIDAD/CUARTO/PRIMER SEMESTRE/SIST. ELECTRNICOS DIGITALES/PRCTICAS/trabajo/trabajo.runs/synth_1/trabajo.dcp}}
-  read_xdc {{D:/UNIVERSIDAD/CUARTO/PRIMER SEMESTRE/SIST. ELECTRNICOS DIGITALES/PRCTICAS/Nexys4DDR_Master.xdc}}
+  add_files -quiet C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.runs/synth_1/trabajo.dcp
+  read_xdc C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/Nexys4DDR_Master.xdc
   link_design -top trabajo -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]

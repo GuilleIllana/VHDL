@@ -39,9 +39,7 @@ entity maquina_cruce is
         --ELEMENTOS NECESARIOS PARA EL FUNCIONAMIENTO BÁSICO DE LOS SEMÁFOROS
         sensor: in STD_LOGIC;
         Sem1: out STD_LOGIC_VECTOR (2 downto 0);
-        Sem2: out STD_LOGIC_VECTOR (2 downto 0)
-        --clk500Hz: in STD_LOGIC;
-        --clk1Hz: inout STD_LOGIC  
+        Sem2: out STD_LOGIC_VECTOR (2 downto 0)  
   );
 end maquina_cruce;
 
@@ -65,7 +63,7 @@ component divisor_frecuencia
 end component;
 
 --señales y constantes necesariaspara los temporizadores y cuantas atrás síncronas
-constant module: positive :=  100000000 / 1;
+constant module: positive :=  5 / 1;
 
 begin
 
@@ -82,7 +80,7 @@ TIMER: divisor_frecuencia
 SYNC_PROC: PROCESS (clk)
 begin
     if rising_edge(clk) then
-        if (reset ='1') then
+        if reset ='1' then
             estado_cruce <= S0;
             
         else
@@ -115,10 +113,10 @@ begin
     end case;
 END PROCESS; 
 
-NEXT_STATE_CRUCE_DECODE: PROCESS
-variable count: integer;
+NEXT_STATE_CRUCE_DECODE: PROCESS (clk1Hz, sensor)
+variable count: positive;
 begin
-    nextstate_cruce <= S0;
+
     if estado_cruce = S0 then
         if sensor = '1' then
             nextstate_cruce <= S1;
@@ -127,28 +125,29 @@ begin
         
     elsif estado_cruce = S1 then
                 
-        wait until rising_edge(clk1Hz);
-        count := count - 1;
-        
+        if rising_edge(clk1Hz) then
+            count := count - 1;
+        end if;
         if count = 0 then
             nextstate_cruce <= S2;
-            count := 5;
+            count := 3;
         end if; 
         
     elsif estado_cruce = S2 then
              
-        wait until rising_edge(clk1Hz);
+        if rising_edge(clk1Hz) then
         count := count - 1;
-        
+        end if;
         if count = 0 then
             nextstate_cruce <= S3;        
             count := 3;  
         end if;
         
     elsif estado_cruce = S3 then
-        wait until rising_edge(clk1Hz);
+    
+        if rising_edge(clk1Hz) then
         count := count - 1;
-        
+        end if;
         if count = 0 then
             nextstate_cruce <= S4;
             count:=1;
@@ -156,9 +155,9 @@ begin
         
     elsif estado_cruce = S4 then         
         
-        wait until rising_edge(clk1Hz);
+        if rising_edge(clk1Hz) then
         count := count - 1;
-        
+        end if;
         if count = 0 then
             nextstate_cruce <= S0;
         end if;
@@ -166,8 +165,7 @@ begin
     else
         nextstate_cruce <= S0;
     
-    end if;
-    
+    end if;    
 END PROCESS;
 
 end Behavioral;

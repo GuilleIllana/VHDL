@@ -1,0 +1,1 @@
+-wto "1c6fd47309f34058825c98471d1a33b6" --incr --debug "typical" --relax --mt "2" --maxdelay -L "xil_defaultlib" -L "simprims_ver" -L "secureip" --snapshot "simMaquinaCruce_time_impl" -transport_int_delays -pulse_r "0" -pulse_int_r "0" -pulse_e "0" -pulse_int_e "0" "xil_defaultlib.simMaquinaCruce" "xil_defaultlib.glbl" -log "elaborate.log" 

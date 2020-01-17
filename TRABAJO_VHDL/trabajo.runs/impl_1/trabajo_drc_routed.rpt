@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Thu Jan 16 15:01:03 2020
+| Date         : Fri Jan 17 01:47:27 2020
 | Host         : LAPTOP-CG3U7DTI running 64-bit major release  (build 9200)
 | Command      : report_drc -file trabajo_drc_routed.rpt -pb trabajo_drc_routed.pb -rpx trabajo_drc_routed.rpx
 | Design       : trabajo
@@ -24,14 +24,14 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 36
+             Violations found: 5
 +----------+------------------+-----------------------------------------------------+------------+
 | Rule     | Severity         | Description                                         | Violations |
 +----------+------------------+-----------------------------------------------------+------------+
 | NSTD-1   | Critical Warning | Unspecified I/O Standard                            | 1          |
 | UCIO-1   | Critical Warning | Unconstrained Logical Port                          | 1          |
 | CFGBVS-1 | Warning          | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PDRC-153 | Warning          | Gated clock check                                   | 33         |
+| PDRC-153 | Warning          | Gated clock check                                   | 2          |
 +----------+------------------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -61,167 +61,12 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[0]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net MAQUINA_SEMAFORO_CRUCE/FSM_sequential_nextstate_cruce_reg_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/FSM_sequential_nextstate_cruce_reg_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/FSM_sequential_nextstate_cruce_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[10]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[10]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#3 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[11]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[11]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#4 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[12]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[12]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[12]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#5 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[13]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[13]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[13]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#6 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[14]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[14]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[14]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#7 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[15]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[15]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[15]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#8 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[16]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[16]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[16]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#9 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[17]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[17]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[17]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#10 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[18]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[18]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[18]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#11 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[19]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[19]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[19]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#12 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[1]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#13 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[20]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[20]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[20]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#14 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[21]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[21]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[21]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#15 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[22]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[22]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[22]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#16 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[23]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[23]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[23]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#17 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[24]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[24]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[24]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#18 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[25]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[25]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[25]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#19 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[26]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[26]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[26]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#20 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[27]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[27]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[27]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#21 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[28]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[28]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[28]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#22 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[29]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[29]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[29]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#23 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[2]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#24 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[30]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[30]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[30]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#25 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[31]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[31]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[31]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#26 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[3]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#27 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[4]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#28 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[5]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#29 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[6]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#30 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[7]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[7]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#31 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[8]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[8]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#32 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/count[9]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/count[9]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/count[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#33 Warning
-Gated clock check  
-Net MAQUINA_SEMAFORO_CRUCE/nextstate_cruce[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_CRUCE/nextstate_cruce[0]_LDC_i_1/O, cell MAQUINA_SEMAFORO_CRUCE/nextstate_cruce[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[0]_i_1_n_0 is a gated clock net sourced by a combinational pin MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[0]_i_1/O, cell MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[0]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 

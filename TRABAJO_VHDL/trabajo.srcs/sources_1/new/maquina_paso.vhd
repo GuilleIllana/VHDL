@@ -67,7 +67,7 @@ component divisor_frecuencia
 end component;
 
 --señales y constantes necesariaspara los temporizadores y cuantas atrás síncronas
-constant module: positive :=  100000000 / 10000000; -- 100MHz -> 1Hz
+constant module: positive :=  100000000 / 1; -- 100MHz -> 1Hz
 
 
 --Declaración componente decodificador 7 segmentos
@@ -134,10 +134,10 @@ begin
     end case;
 END PROCESS;
 
-NEXT_STATE_PASO_DECODE: PROCESS
+NEXT_STATE_PASO_DECODE: PROCESS(clk1Hz,boton)
 variable count: positive;
 begin
-    nextstate_paso <= S0;
+    
     if estado_paso = S0 then
         if boton = '1' then
             nextstate_paso <= S1;
@@ -146,9 +146,9 @@ begin
         
     elsif estado_paso = S1 then
        
-        wait until clk1Hz'event and clk1Hz = '1';
+        if clk1Hz'event and clk1Hz = '1' then
         count := count - 1;
-
+        end if;
         if count = 0 then
             nextstate_paso <= S2;
             count := 1;
@@ -171,27 +171,27 @@ begin
                 code <= "0000";
          end case;  
          
-         wait until rising_edge(clk1Hz);
+         if rising_edge(clk1Hz) then
          count := count - 1;
-            
+          end if;
         if count = 0 then
             nextstate_paso <= S3;        
             count := 3;
         end if;
     
     elsif estado_paso = S3 then
-        wait until rising_edge(clk1Hz);
+        if rising_edge(clk1Hz) then 
         count := count - 1;
-        
+        end if;
         if count = 0 then
             nextstate_paso <= S4;
             count := 1;
         end if;
         
     elsif estado_paso = S4 then          
-        wait until rising_edge(clk1Hz);
-        count := count - 1;         
-        
+        if rising_edge(clk1Hz) then
+         count := count - 1;         
+        end if;
         if count = 0 then
             nextstate_paso <= S0;
         end if;
@@ -199,7 +199,8 @@ begin
     else
         nextstate_paso <= S0;
     
-    end if;
+    end if;    
+   
 END PROCESS;
 
 end Behavioral;

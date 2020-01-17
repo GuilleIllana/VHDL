@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/UNIVERSIDAD/CUARTO/PRIMER SEMESTRE/SIST. ELECTRNICOS DIGITALES/PRCTICAS/trabajo/trabajo.runs/synth_1'
+HD_PWD='C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
