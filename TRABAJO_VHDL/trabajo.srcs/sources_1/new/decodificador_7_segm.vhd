@@ -32,10 +32,17 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity decodificador_7_segm is
-  Port ( 
-    code : in STD_LOGIC_VECTOR (3 downto 0);
-    led : out STD_LOGIC_VECTOR (6 downto 0)
+
+  Generic (
+    N_code : positive := 4;
+    N_segmentos : positive := 7
   );
+
+  Port ( 
+    code : in STD_LOGIC_VECTOR (N_code - 1 downto 0);
+    led : out STD_LOGIC_VECTOR (N_segmentos - 1 downto 0)
+  );
+
 end decodificador_7_segm;
 
 architecture dataflow of decodificador_7_segm is

@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity divisor_frecuencia is
 
   Generic(
-    MODULE: positive:=100000000
+    MODULE: positive
   );
   
   Port ( 
@@ -65,9 +65,6 @@ signal clk_state: STD_LOGIC := '0';
 		end if;
 	end process;
 	
-persecond: process (clk_state)
-    begin
-	   clk_out <= clk_state;
-    end process;
+clk_out <= clk_state;
 
 end Behavioral;

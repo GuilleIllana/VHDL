@@ -15,35 +15,76 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18776 
+INFO: Helper process launched with PID 18804 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 734.137 ; gain = 176.746
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 735.180 ; gain = 177.168
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'trabajo' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/trabajo.vhd:59]
-INFO: [Synth 8-3491] module 'maquina_cruce' declared at 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_cruce.vhd:34' bound to instance 'MAQUINA_SEMAFORO_CRUCE' of component 'maquina_cruce' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/trabajo.vhd:93]
-INFO: [Synth 8-638] synthesizing module 'maquina_cruce' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_cruce.vhd:46]
-	Parameter MODULE bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'divisor_frecuencia' declared at 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/divisor_frecuencia.vhd:34' bound to instance 'TIMER' of component 'divisor_frecuencia' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_cruce.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'trabajo' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/trabajo.vhd:52]
+INFO: [Synth 8-3491] module 'maquina_cruce' declared at 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_cruce.vhd:34' bound to instance 'MAQUINA_SEMAFORO_CRUCE' of component 'maquina_cruce' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/trabajo.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'maquina_cruce' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_cruce.vhd:56]
+	Parameter N_luces bound to: 3 - type: integer 
+	Parameter C1 bound to: 3 - type: integer 
+	Parameter C2 bound to: 5 - type: integer 
+	Parameter C3 bound to: 3 - type: integer 
+	Parameter C4 bound to: 5 - type: integer 
+	Parameter MODULE bound to: 1000000 - type: integer 
+INFO: [Synth 8-3491] module 'divisor_frecuencia' declared at 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/divisor_frecuencia.vhd:34' bound to instance 'PRESCALER' of component 'divisor_frecuencia' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_cruce.vhd:82]
 INFO: [Synth 8-638] synthesizing module 'divisor_frecuencia' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/divisor_frecuencia.vhd:47]
-	Parameter MODULE bound to: 5 - type: integer 
+	Parameter MODULE bound to: 1000000 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'divisor_frecuencia' (1#1) [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/divisor_frecuencia.vhd:47]
-WARNING: [Synth 8-614] signal 'estado_cruce' is read in the process but is not in the sensitivity list [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_cruce.vhd:116]
-INFO: [Synth 8-256] done synthesizing module 'maquina_cruce' (2#1) [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_cruce.vhd:46]
-INFO: [Synth 8-3491] module 'maquina_paso' declared at 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:34' bound to instance 'MAQUINA_SEMAFORO_PASO' of component 'maquina_paso' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/trabajo.vhd:104]
-INFO: [Synth 8-638] synthesizing module 'maquina_paso' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:50]
-	Parameter MODULE bound to: 100000000 - type: integer 
-INFO: [Synth 8-3491] module 'divisor_frecuencia' declared at 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/divisor_frecuencia.vhd:34' bound to instance 'TIMER' of component 'divisor_frecuencia' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:85]
+	Parameter MODULE bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'divisor_frecuencia' declared at 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/divisor_frecuencia.vhd:34' bound to instance 'TIMER' of component 'divisor_frecuencia' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_cruce.vhd:91]
 INFO: [Synth 8-638] synthesizing module 'divisor_frecuencia__parameterized1' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/divisor_frecuencia.vhd:47]
-	Parameter MODULE bound to: 100000000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'divisor_frecuencia__parameterized1' (2#1) [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/divisor_frecuencia.vhd:47]
-INFO: [Synth 8-3491] module 'decodificador_7_segm' declared at 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/decodificador_7_segm.vhd:34' bound to instance 'Decoder_7_segmentos' of component 'decodificador_7_segm' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:94]
-INFO: [Synth 8-638] synthesizing module 'decodificador_7_segm' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/decodificador_7_segm.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'decodificador_7_segm' (3#1) [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/decodificador_7_segm.vhd:41]
-WARNING: [Synth 8-614] signal 'estado_paso' is read in the process but is not in the sensitivity list [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:137]
-INFO: [Synth 8-256] done synthesizing module 'maquina_paso' (4#1) [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:50]
-WARNING: [Synth 8-3848] Net led in module/entity trabajo does not have driver. [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/trabajo.vhd:54]
-WARNING: [Synth 8-3848] Net estado in module/entity trabajo does not have driver. [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/trabajo.vhd:55]
-INFO: [Synth 8-256] done synthesizing module 'trabajo' (5#1) [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/trabajo.vhd:59]
+	Parameter MODULE bound to: 100 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'divisor_frecuencia__parameterized1' (1#1) [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/divisor_frecuencia.vhd:47]
+WARNING: [Synth 8-614] signal 'nextstate_cruce' is read in the process but is not in the sensitivity list [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_cruce.vhd:101]
+WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_cruce.vhd:136]
+WARNING: [Synth 8-614] signal 'sensor' is read in the process but is not in the sensitivity list [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_cruce.vhd:136]
+WARNING: [Synth 8-3848] Net nextstate_cruce in module/entity maquina_cruce does not have driver. [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_cruce.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'maquina_cruce' (2#1) [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_cruce.vhd:56]
+INFO: [Synth 8-3491] module 'maquina_paso' declared at 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:34' bound to instance 'MAQUINA_SEMAFORO_PASO' of component 'maquina_paso' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/trabajo.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'maquina_paso' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:62]
+	Parameter N_luces bound to: 3 - type: integer 
+	Parameter N_luces_peat bound to: 2 - type: integer 
+	Parameter N_segmentos bound to: 7 - type: integer 
+	Parameter N_code bound to: 4 - type: integer 
+	Parameter C1 bound to: 3 - type: integer 
+	Parameter C2 bound to: 5 - type: integer 
+	Parameter C3 bound to: 1 - type: integer 
+	Parameter C4 bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'modulo_sincronizacion' declared at 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/modulo_sincronizacion.vhd:26' bound to instance 'mod_sync' of component 'modulo_sincronizacion' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:119]
+INFO: [Synth 8-638] synthesizing module 'modulo_sincronizacion' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/modulo_sincronizacion.vhd:34]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/modulo_sincronizacion.vhd:40]
+INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "false" *) [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/modulo_sincronizacion.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'modulo_sincronizacion' (3#1) [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/modulo_sincronizacion.vhd:34]
+INFO: [Synth 8-3491] module 'modulo_antirrebote' declared at 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/modulo_antirrebote.vhd:26' bound to instance 'mod_debouncer' of component 'modulo_antirrebote' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'modulo_antirrebote' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/modulo_antirrebote.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'modulo_antirrebote' (4#1) [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/modulo_antirrebote.vhd:37]
+	Parameter MODULE bound to: 10000000 - type: integer 
+INFO: [Synth 8-3491] module 'divisor_frecuencia' declared at 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/divisor_frecuencia.vhd:34' bound to instance 'PRESCALER' of component 'divisor_frecuencia' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:134]
+INFO: [Synth 8-638] synthesizing module 'divisor_frecuencia__parameterized3' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/divisor_frecuencia.vhd:47]
+	Parameter MODULE bound to: 10000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'divisor_frecuencia__parameterized3' (4#1) [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/divisor_frecuencia.vhd:47]
+	Parameter MODULE bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'divisor_frecuencia' declared at 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/divisor_frecuencia.vhd:34' bound to instance 'TIMER' of component 'divisor_frecuencia' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:143]
+INFO: [Synth 8-3491] module 'decodificador_7_segm' declared at 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/decodificador_7_segm.vhd:34' bound to instance 'Decoder_7_segmentos' of component 'decodificador_7_segm' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'decodificador_7_segm' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/decodificador_7_segm.vhd:48]
+	Parameter N_code bound to: 4 - type: integer 
+	Parameter N_segmentos bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'decodificador_7_segm' (5#1) [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/decodificador_7_segm.vhd:48]
+WARNING: [Synth 8-614] signal 'boton_dev' is read in the process but is not in the sensitivity list [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:190]
+WARNING: [Synth 8-614] signal 'nextstate_paso' is read in the process but is not in the sensitivity list [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:190]
+INFO: [Synth 8-4471] merging register 'count_reg[31:0]' into 'count_reg[31:0]' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:212]
+INFO: [Synth 8-4471] merging register 'count_reg[31:0]' into 'count_reg[31:0]' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:237]
+INFO: [Synth 8-4471] merging register 'count_reg[31:0]' into 'count_reg[31:0]' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:197]
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:212]
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:237]
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:197]
+WARNING: [Synth 8-5787] Register count_reg in module maquina_paso is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:197]
+WARNING: [Synth 8-5787] Register count_reg in module maquina_paso is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:197]
+WARNING: [Synth 8-5787] Register count_reg in module maquina_paso is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'maquina_paso' (6#1) [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'trabajo' (7#1) [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/trabajo.vhd:52]
 WARNING: [Synth 8-3917] design trabajo has port digctrl[7] driven by constant 1
 WARNING: [Synth 8-3917] design trabajo has port digctrl[6] driven by constant 1
 WARNING: [Synth 8-3917] design trabajo has port digctrl[5] driven by constant 1
@@ -52,14 +93,8 @@ WARNING: [Synth 8-3917] design trabajo has port digctrl[3] driven by constant 1
 WARNING: [Synth 8-3917] design trabajo has port digctrl[2] driven by constant 1
 WARNING: [Synth 8-3917] design trabajo has port digctrl[1] driven by constant 1
 WARNING: [Synth 8-3917] design trabajo has port digctrl[0] driven by constant 0
-WARNING: [Synth 8-3331] design trabajo has unconnected port led
-WARNING: [Synth 8-3331] design trabajo has unconnected port estado[4]
-WARNING: [Synth 8-3331] design trabajo has unconnected port estado[3]
-WARNING: [Synth 8-3331] design trabajo has unconnected port estado[2]
-WARNING: [Synth 8-3331] design trabajo has unconnected port estado[1]
-WARNING: [Synth 8-3331] design trabajo has unconnected port estado[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 797.578 ; gain = 240.188
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 798.391 ; gain = 240.379
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -72,10 +107,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 797.578 ; gain = 240.188
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 798.391 ; gain = 240.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 797.578 ; gain = 240.188
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 798.391 ; gain = 240.379
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -87,46 +122,33 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/trabajo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 902.051 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 912.313 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 902.051 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 912.313 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 902.051 ; gain = 344.660
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 912.313 ; gain = 354.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 902.051 ; gain = 344.660
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 912.313 ; gain = 354.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 902.051 ; gain = 344.660
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 912.313 ; gain = 354.301
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'estado_cruce_reg' in module 'maquina_cruce'
-INFO: [Synth 8-5544] ROM "Sem2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "Sem1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "code" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_nextstate_cruce_reg' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_cruce.vhd:87]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_nextstate_cruce_reg' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_cruce.vhd:87]
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 iSTATE0 |                                0 |                              000
-                  iSTATE |                                1 |                              001
-*
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'estado_cruce_reg' using encoding 'sequential' in module 'maquina_cruce'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_nextstate_cruce_reg' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_cruce.vhd:87]
-WARNING: [Synth 8-327] inferring latch for variable 'nextstate_paso_reg' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:108]
-WARNING: [Synth 8-327] inferring latch for variable 'code_reg' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:161]
+INFO: [Synth 8-5545] ROM "code" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-327] inferring latch for variable 'nextstate_paso_reg' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:162]
+WARNING: [Synth 8-327] inferring latch for variable 'estado_paso_reg' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:161]
+WARNING: [Synth 8-327] inferring latch for variable 'code_reg' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:154]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 902.051 ; gain = 344.660
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 912.313 ; gain = 354.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -139,21 +161,25 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     31 Bit       Adders := 1     
-	   2 Input      2 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 2     
 +---Registers : 
-	               31 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	               32 Bit    Registers := 3     
+	                6 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
 +---Muxes : 
-	   2 Input     31 Bit        Muxes := 3     
-	   3 Input     31 Bit        Muxes := 1     
-	   6 Input      3 Bit        Muxes := 3     
-	   2 Input      3 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 18    
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 10    
+	   5 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 2     
+	   6 Input      3 Bit        Muxes := 4     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
 	   6 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 9     
-	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -163,36 +189,58 @@ Start RTL Hierarchical Component Statistics
 Hierarchical RTL Component report 
 Module divisor_frecuencia 
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
-	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module divisor_frecuencia__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 Module maquina_cruce 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
 +---Muxes : 
-	   6 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 7     
-Module divisor_frecuencia__parameterized1 
+	   2 Input     32 Bit        Muxes := 13    
+	   2 Input      3 Bit        Muxes := 6     
+	   5 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 2     
+	   6 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module modulo_sincronizacion 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module modulo_antirrebote 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module divisor_frecuencia__parameterized3 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
 Module maquina_paso 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     31 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
 +---Registers : 
-	               31 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     31 Bit        Muxes := 3     
-	   3 Input     31 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 5     
+	   4 Input     32 Bit        Muxes := 1     
 	   6 Input      3 Bit        Muxes := 2     
-	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   4 Input      3 Bit        Muxes := 1     
 	   6 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -209,10 +257,6 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3917] design trabajo has port Sem1[0] driven by constant 0
-WARNING: [Synth 8-3917] design trabajo has port Sem2[2] driven by constant 0
-WARNING: [Synth 8-3917] design trabajo has port Sem2[1] driven by constant 0
-WARNING: [Synth 8-3917] design trabajo has port Sem2[0] driven by constant 1
 WARNING: [Synth 8-3917] design trabajo has port digctrl[7] driven by constant 1
 WARNING: [Synth 8-3917] design trabajo has port digctrl[6] driven by constant 1
 WARNING: [Synth 8-3917] design trabajo has port digctrl[5] driven by constant 1
@@ -221,34 +265,147 @@ WARNING: [Synth 8-3917] design trabajo has port digctrl[3] driven by constant 1
 WARNING: [Synth 8-3917] design trabajo has port digctrl[2] driven by constant 1
 WARNING: [Synth 8-3917] design trabajo has port digctrl[1] driven by constant 1
 WARNING: [Synth 8-3917] design trabajo has port digctrl[0] driven by constant 0
-WARNING: [Synth 8-3331] design trabajo has unconnected port led
-WARNING: [Synth 8-3331] design trabajo has unconnected port estado[4]
-WARNING: [Synth 8-3331] design trabajo has unconnected port estado[3]
-WARNING: [Synth 8-3331] design trabajo has unconnected port estado[2]
-WARNING: [Synth 8-3331] design trabajo has unconnected port estado[1]
-WARNING: [Synth 8-3331] design trabajo has unconnected port estado[0]
-INFO: [Synth 8-3886] merging instance 'MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[2]' (LD) to 'MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[1] )
-INFO: [Synth 8-3886] merging instance 'MAQUINA_SEMAFORO_PASO/estado_paso_reg[2]' (FDR) to 'MAQUINA_SEMAFORO_PASO/estado_paso_reg[1]'
-WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[1]) is unused and will be removed from module trabajo.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/code_reg[3] )
 WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_PASO/code_reg[3]) is unused and will be removed from module trabajo.
-WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_PASO/code_reg[2]) is unused and will be removed from module trabajo.
-WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_PASO/code_reg[1]) is unused and will be removed from module trabajo.
-WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_PASO/code_reg[0]) is unused and will be removed from module trabajo.
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MAQUINA_SEMAFORO_PASO/code_reg[3]__0/Q' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:96]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:96]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:96]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MAQUINA_SEMAFORO_PASO/code_reg[2]__0/Q' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:96]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:96]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:96]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MAQUINA_SEMAFORO_PASO/code_reg[1]__0/Q' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:96]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:96]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:96]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MAQUINA_SEMAFORO_PASO/code_reg[0]__0/Q' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:96]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:96]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:96]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[0]__0_P )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[2]__0_C )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[1]__0_P )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[31]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[30]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[29]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[28]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[27]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[26]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[25]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[24]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[23]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[22]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[21]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[20]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[19]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[18]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[17]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[16]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[15]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[14]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[13]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[12]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[11]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[10]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[9]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[8]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[7]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[6]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[5]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[4]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/count_reg[3]__0_C )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[2]_C )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[0]_P )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[1]_C )
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/estado_cruce[2]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/estado_cruce[2]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/estado_cruce[2]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/estado_cruce[1]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/estado_cruce[1]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/estado_cruce[1]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/estado_cruce[0]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/estado_cruce[0]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/estado_cruce[0]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[2]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[1]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[0]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[31]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[31]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[31]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[30]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[30]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[30]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[29]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[29]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[29]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[28]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[28]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[28]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[27]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[27]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[27]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[26]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[26]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[26]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[25]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[25]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[25]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[24]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[24]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[24]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[23]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[23]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[23]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[22]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[22]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[22]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[21]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[21]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[21]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[20]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[20]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[20]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[19]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[19]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[19]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[18]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[18]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[18]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[17]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[17]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[17]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[16]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[16]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[16]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[15]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[15]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[15]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[14]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[14]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[14]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[13]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[13]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[13]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[12]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[12]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[12]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[11]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[11]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[11]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[10]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[10]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[10]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[9]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[9]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[9]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[8]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[8]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[8]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[7]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[7]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[7]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[6]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[6]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[6]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[5]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[5]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[5]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[4]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[4]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[4]_P) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[3]_LDC) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[3]_C) is unused and will be removed from module trabajo.
+WARNING: [Synth 8-3332] Sequential element (MAQUINA_SEMAFORO_CRUCE/count[3]_P) is unused and will be removed from module trabajo.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[1]_P' (FDP) to 'MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[2]_P'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[2]_P )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 902.051 ; gain = 344.660
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 912.313 ; gain = 354.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -260,13 +417,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 902.051 ; gain = 344.660
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 912.313 ; gain = 354.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 902.051 ; gain = 344.660
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 912.313 ; gain = 354.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -277,8 +434,20 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Z with 1st driver pin 'MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[2]__0/Q' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:162]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Z with 2nd driver pin 'GND' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:162]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Z is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:162]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Z with 1st driver pin 'MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[1]__0/Q' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:162]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Z with 2nd driver pin 'GND' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:162]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Z is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:162]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Z with 1st driver pin 'MAQUINA_SEMAFORO_PASO/estado_paso_reg[2]/Q' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:161]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Z with 2nd driver pin 'GND' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:161]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Z is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:161]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Z with 1st driver pin 'MAQUINA_SEMAFORO_PASO/estado_paso_reg[1]/Q' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:161]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Z with 2nd driver pin 'GND' [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:161]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Z is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd:161]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 902.148 ; gain = 344.758
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 912.313 ; gain = 354.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -302,7 +471,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 917.945 ; gain = 360.555
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 925.078 ; gain = 367.066
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -315,7 +484,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 917.945 ; gain = 360.555
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 925.078 ; gain = 367.066
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -327,25 +496,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 917.945 ; gain = 360.555
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 925.078 ; gain = 367.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 917.945 ; gain = 360.555
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 925.078 ; gain = 367.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 917.945 ; gain = 360.555
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 925.078 ; gain = 367.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 917.945 ; gain = 360.555
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 925.078 ; gain = 367.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -358,50 +527,43 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+------+------+
-|      |Cell  |Count |
-+------+------+------+
-|1     |BUFG  |     1|
-|2     |LUT1  |     2|
-|3     |LUT2  |     4|
-|4     |FDRE  |     2|
-|5     |LD    |     2|
-|6     |IBUF  |     4|
-|7     |OBUF  |    26|
-|8     |OBUFT |     6|
-+------+------+------+
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |FDRE |     3|
+|3     |IBUF |     2|
+|4     |OBUF |    26|
++------+-----+------+
 
 Report Instance Areas: 
-+------+-------------------------+--------------+------+
-|      |Instance                 |Module        |Cells |
-+------+-------------------------+--------------+------+
-|1     |top                      |              |    47|
-|2     |  MAQUINA_SEMAFORO_CRUCE |maquina_cruce |     5|
-|3     |  MAQUINA_SEMAFORO_PASO  |maquina_paso  |     5|
-+------+-------------------------+--------------+------+
++------+------------------------+----------------------+------+
+|      |Instance                |Module                |Cells |
++------+------------------------+----------------------+------+
+|1     |top                     |                      |    32|
+|2     |  MAQUINA_SEMAFORO_PASO |maquina_paso          |     3|
+|3     |    mod_sync            |modulo_sincronizacion |     3|
++------+------------------------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 917.945 ; gain = 360.555
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 925.078 ; gain = 367.066
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 12 critical warnings and 28 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 917.945 ; gain = 256.082
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 917.945 ; gain = 360.555
+Synthesis finished with 0 errors, 12 critical warnings and 227 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:37 . Memory (MB): peak = 925.078 ; gain = 253.145
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 925.078 ; gain = 367.066
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 935.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 941.289 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  LD => LDCE: 2 instances
+No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-37 Infos, 46 Warnings, 12 Critical Warnings and 0 Errors encountered.
+82 Infos, 131 Warnings, 12 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:46 . Memory (MB): peak = 935.027 ; gain = 638.785
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 935.027 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:56 . Memory (MB): peak = 941.289 ; gain = 648.598
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 941.289 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.runs/synth_1/trabajo.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file trabajo_utilization_synth.rpt -pb trabajo_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jan 17 01:45:39 2020...
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 18 16:18:37 2020...

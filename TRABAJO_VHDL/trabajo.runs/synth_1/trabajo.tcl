@@ -34,6 +34,8 @@ read_vhdl -library xil_defaultlib {
   C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/divisor_frecuencia.vhd
   C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_cruce.vhd
   C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd
+  C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/modulo_antirrebote.vhd
+  C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/modulo_sincronizacion.vhd
   C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/trabajo.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being

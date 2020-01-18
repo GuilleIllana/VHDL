@@ -32,26 +32,35 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity maquina_cruce is
+ 
+  Generic (
+        N_luces : positive := 3;
+        C1 : integer := 3;
+        C2 : integer := 5;
+        C3 : integer := 3;
+        C4 : integer := 5
+  );
+  
   Port ( 
         reset: in STD_LOGIC;
         clk: in STD_LOGIC;
         
         --ELEMENTOS NECESARIOS PARA EL FUNCIONAMIENTO BÁSICO DE LOS SEMÁFOROS
         sensor: in STD_LOGIC;
-        Sem1: out STD_LOGIC_VECTOR (2 downto 0);
-        Sem2: out STD_LOGIC_VECTOR (2 downto 0)  
+        Sem1: out STD_LOGIC_VECTOR (N_luces - 1 downto 0);
+        Sem2: out STD_LOGIC_VECTOR (N_luces - 1 downto 0)  
   );
+  
 end maquina_cruce;
 
 architecture Behavioral of maquina_cruce is
 
---señales y tipos necesarios para los semáforos
+--Declaración de señales y tipos necesarios
+
 TYPE state_cruce IS (S0, S1, S2, S3, S4);
 SIGNAL estado_cruce, nextstate_cruce: state_cruce;
-
-signal clk1Hz: STD_LOGIC;
-
---Declaración componente de divisor de frecuencia
+ 
+--Declaración componente divisor de frecuencia
 component divisor_frecuencia
   generic (
     MODULE: positive
@@ -62,31 +71,42 @@ component divisor_frecuencia
   );
 end component;
 
---señales y constantes necesariaspara los temporizadores y cuantas atrás síncronas
-constant module: positive :=  5 / 1;
+--señales y constantes necesarias para los temporizadores y cuantas atrás síncronas
+constant module_prescaler: positive :=  100000000 / 100; --100MHz --> 100Hz
+constant module_timer: positive :=  100 / 1; --100Hz --> 1Hz
+
+signal clk1Hz, clk100Hz: STD_LOGIC;
 
 begin
 
-TIMER: divisor_frecuencia
-    generic map (
-      MODULE => module
+PRESCALER: divisor_frecuencia
+    generic map(
+        MODULE => module_prescaler
     )
     port map (
-      CLK_IN  => clk,
+        CLK_IN => clk,
+        CLK_OUT => clk100Hz
+    ); 
+
+TIMER: divisor_frecuencia
+    generic map (
+      MODULE => module_timer
+    )
+    port map (
+      CLK_IN  => clk100Hz,
       CLK_OUT => clk1Hz
     );
 
 
-SYNC_PROC: PROCESS (clk)
+SYNC_PROC: PROCESS (clk, reset)
 begin
-    if rising_edge(clk) then
+
         if reset ='1' then
             estado_cruce <= S0;
-            
         else
             estado_cruce <= nextstate_cruce;
-        end if;
-    end if;
+        end if; 
+
 END PROCESS;
 
 SEM1_DECODE: PROCESS(estado_cruce)
@@ -113,59 +133,109 @@ begin
     end case;
 END PROCESS; 
 
-NEXT_STATE_CRUCE_DECODE: PROCESS (clk1Hz, sensor)
-variable count: positive;
+NEXT_STATE_CRUCE_DECODE: PROCESS (clk1Hz, estado_cruce)
+variable count: integer := 0;
 begin
 
-    if estado_cruce = S0 then
+    if reset = '1' then
+            estado_cruce <= S0;
+    
+    elsif estado_cruce = S0 then
         if sensor = '1' then
-            nextstate_cruce <= S1;
-            count := 3;
+            estado_cruce <= S1;
+            count := C1;
+        else
+            estado_cruce <= S0;
         end if;
         
     elsif estado_cruce = S1 then
                 
         if rising_edge(clk1Hz) then
             count := count - 1;
+            estado_cruce <= S1;
         end if;
         if count = 0 then
-            nextstate_cruce <= S2;
-            count := 3;
+            estado_cruce <= S2;
+            count := C2;
         end if; 
         
     elsif estado_cruce = S2 then
              
         if rising_edge(clk1Hz) then
         count := count - 1;
+        estado_cruce <= S2;     
+       
         end if;
         if count = 0 then
-            nextstate_cruce <= S3;        
-            count := 3;  
+            estado_cruce <= S3;        
+            count := C3;  
         end if;
         
     elsif estado_cruce = S3 then
     
         if rising_edge(clk1Hz) then
         count := count - 1;
+        estado_cruce <= S3;
         end if;
         if count = 0 then
-            nextstate_cruce <= S4;
-            count:=1;
+            estado_cruce <= S4;
+            count:= C4;
         end if;
         
     elsif estado_cruce = S4 then         
         
         if rising_edge(clk1Hz) then
         count := count - 1;
+        estado_cruce <= S4;
         end if;
         if count = 0 then
-            nextstate_cruce <= S0;
+            estado_cruce <= S0;
         end if;
     
     else
-        nextstate_cruce <= S0;
+        estado_cruce <= S0;
     
-    end if;    
+    end if;  
+    
+--    case estado_cruce is
+--        when S0 =>
+--            if sensor = '1' then
+--                nextstate_cruce <= S1;
+--                count:= 3;
+--            end if;
+--        when S1 => 
+--            if rising_edge(clk1Hz) then
+--                count:= count - 1;
+--                if count = 0 then
+--                    nextstate_cruce <= S2;
+--                    count := 3;
+--                end if;
+--            end if;
+--        when S2 =>
+--            if rising_edge(clk1Hz) then
+--                count:= count - 1;
+--                if count = 0 then
+--                    nextstate_cruce <= S3;
+--                    count:= 3;
+--                end if;
+--            end if;
+--        when S3 => 
+--            if rising_edge (clk1Hz) then 
+--                count:=count - 1;
+--                if count = 0 then
+--                    nextstate_cruce <= S4;
+--                    count := 3;
+--                end if;
+--            end if;
+--        when S4 => 
+--            if rising_edge(clk1Hz) then
+--                count:= count -1 ;
+--                if count = 0 then
+--                    nextstate_cruce <= S0;
+--                end if;
+--            end if;
+--    end case;
+        
 END PROCESS;
 
 end Behavioral;
