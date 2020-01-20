@@ -44,7 +44,7 @@ component maquina_paso
         --ELEMENTOS NECESARIOS PARA EL FUNCIONAMIENTO BÁSICO DE LOS SEMÁFOROS
         boton: in STD_LOGIC;
         Sem3: out STD_LOGIC_VECTOR (2 downto 0);
-        Sem_peatones: out STD_LOGIC_VECTOR (1 downto 0);
+        Sem_peat: out STD_LOGIC_VECTOR (1 downto 0);
         
         --ELEMENTOS NECESARIOS PARA EL FUNCIONAMIENTO DE LA CUENTA ATRÁS
         display: out STD_LOGIC_VECTOR (6 downto 0)
@@ -67,9 +67,10 @@ conec: maquina_paso
     clk => clk1, 
     boton =>boton,
     Sem3 => Sem3,
-    Sem_peatones => Sem_peatones,
+    Sem_peat => Sem_peatones,
     display => display
     );
-    boton <= '1' after 80 ns , '0' after 120 ns ;
-    clk1 <= not clk1 after 5 ns;
+    
+    boton <= '1' after 1000 ms , '0' after 1100 ms ;
+    clk1 <= not clk1 after 5 ms;
 end Behavioral;

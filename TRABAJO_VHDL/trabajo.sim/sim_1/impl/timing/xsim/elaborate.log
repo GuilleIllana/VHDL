@@ -1,6 +1,6 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 1c6fd47309f34058825c98471d1a33b6 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot simMaquinaCruce_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.simMaquinaCruce xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 1c6fd47309f34058825c98471d1a33b6 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot simALL_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.simALL xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -10,10 +10,15 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
 Compiling module xil_defaultlib.glbl
-Compiling architecture behavioral of entity xil_defaultlib.divisor_frecuencia [\divisor_frecuencia(module=10)\]
 Compiling architecture behavioral of entity xil_defaultlib.SEM_CARRETERA_PPAL [sem_carretera_ppal_default]
-Compiling architecture behavioral of entity xil_defaultlib.SEM_CRUCE [sem_cruce_default]
-Compiling architecture behavioral of entity xil_defaultlib.maquina_cruce [maquina_cruce_default]
-Compiling architecture behavioral of entity xil_defaultlib.simmaquinacruce
-Built simulation snapshot simMaquinaCruce_time_impl
+Compiling architecture behavioral of entity xil_defaultlib.SEM_PEATONES [sem_peatones_default]
+Compiling architecture behavioral of entity xil_defaultlib.modulo_sincronizacion [modulo_sincronizacion_default]
+Compiling architecture behavioral of entity xil_defaultlib.modulo_antirrebote [modulo_antirrebote_default]
+Compiling architecture behavioral of entity xil_defaultlib.divisor_frecuencia [\divisor_frecuencia(module=100)\]
+Compiling architecture dataflow of entity xil_defaultlib.decodificador_7_segm [decodificador_7_segm_default]
+Compiling architecture behavioral of entity xil_defaultlib.maquina_paso [maquina_paso_default]
+Compiling architecture behavioral of entity xil_defaultlib.simall
+Built simulation snapshot simALL_time_impl

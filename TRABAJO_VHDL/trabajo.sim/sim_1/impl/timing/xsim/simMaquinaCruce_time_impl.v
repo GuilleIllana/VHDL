@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Sun Jan 19 17:21:42 2020
+// Date        : Mon Jan 20 16:16:31 2020
 // Host        : LAPTOP-CG3U7DTI running 64-bit major release  (build 9200)
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file
 //               C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.sim/sim_1/impl/timing/xsim/simMaquinaCruce_time_impl.v
@@ -22,7 +22,7 @@ module decodificador_7_segm
   wire [2:0]Q;
   wire [5:0]display_OBUF;
 
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT3 #(
     .INIT(8'h83)) 
     \display_OBUF[0]_inst_i_1 
@@ -30,7 +30,7 @@ module decodificador_7_segm
         .I1(Q[2]),
         .I2(Q[1]),
         .O(display_OBUF[0]));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT3 #(
     .INIT(8'hD4)) 
     \display_OBUF[1]_inst_i_1 
@@ -38,7 +38,7 @@ module decodificador_7_segm
         .I1(Q[0]),
         .I2(Q[1]),
         .O(display_OBUF[1]));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT3 #(
     .INIT(8'hF4)) 
     \display_OBUF[2]_inst_i_1 
@@ -46,7 +46,7 @@ module decodificador_7_segm
         .I1(Q[2]),
         .I2(Q[0]),
         .O(display_OBUF[2]));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT3 #(
     .INIT(8'h86)) 
     \display_OBUF[3]_inst_i_1 
@@ -54,7 +54,7 @@ module decodificador_7_segm
         .I1(Q[0]),
         .I2(Q[1]),
         .O(display_OBUF[3]));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT3 #(
     .INIT(8'h28)) 
     \display_OBUF[5]_inst_i_1 
@@ -62,7 +62,7 @@ module decodificador_7_segm
         .I1(Q[0]),
         .I2(Q[1]),
         .O(display_OBUF[4]));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT3 #(
     .INIT(8'h06)) 
     \display_OBUF[6]_inst_i_1 
@@ -74,38 +74,38 @@ endmodule
 
 module divisor_frecuencia
    (clk_state_reg_0,
-    \count_reg[2]_0 );
+    clk_IBUF_BUFG);
   output clk_state_reg_0;
-  input \count_reg[2]_0 ;
+  input clk_IBUF_BUFG;
 
-  wire clk_state_i_1__2_n_0;
+  wire clk_IBUF_BUFG;
+  wire clk_state_i_1_n_0;
   wire clk_state_reg_0;
   wire \count[0]_i_1_n_0 ;
   wire \count[1]_i_1_n_0 ;
   wire \count[2]_i_1_n_0 ;
-  wire \count_reg[2]_0 ;
   wire \count_reg_n_0_[0] ;
   wire \count_reg_n_0_[1] ;
   wire \count_reg_n_0_[2] ;
 
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT4 #(
     .INIT(16'h1FE0)) 
-    clk_state_i_1__2
+    clk_state_i_1
        (.I0(\count_reg_n_0_[1] ),
         .I1(\count_reg_n_0_[0] ),
         .I2(\count_reg_n_0_[2] ),
         .I3(clk_state_reg_0),
-        .O(clk_state_i_1__2_n_0));
+        .O(clk_state_i_1_n_0));
   FDRE #(
     .INIT(1'b0)) 
     clk_state_reg
-       (.C(\count_reg[2]_0 ),
+       (.C(clk_IBUF_BUFG),
         .CE(1'b1),
-        .D(clk_state_i_1__2_n_0),
+        .D(clk_state_i_1_n_0),
         .Q(clk_state_reg_0),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT3 #(
     .INIT(8'h13)) 
     \count[0]_i_1 
@@ -113,7 +113,7 @@ module divisor_frecuencia
         .I1(\count_reg_n_0_[0] ),
         .I2(\count_reg_n_0_[2] ),
         .O(\count[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT3 #(
     .INIT(8'h06)) 
     \count[1]_i_1 
@@ -121,7 +121,7 @@ module divisor_frecuencia
         .I1(\count_reg_n_0_[0] ),
         .I2(\count_reg_n_0_[2] ),
         .O(\count[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT3 #(
     .INIT(8'h18)) 
     \count[2]_i_1 
@@ -132,7 +132,7 @@ module divisor_frecuencia
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[0] 
-       (.C(\count_reg[2]_0 ),
+       (.C(clk_IBUF_BUFG),
         .CE(1'b1),
         .D(\count[0]_i_1_n_0 ),
         .Q(\count_reg_n_0_[0] ),
@@ -140,7 +140,7 @@ module divisor_frecuencia
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[1] 
-       (.C(\count_reg[2]_0 ),
+       (.C(clk_IBUF_BUFG),
         .CE(1'b1),
         .D(\count[1]_i_1_n_0 ),
         .Q(\count_reg_n_0_[1] ),
@@ -148,7 +148,7 @@ module divisor_frecuencia
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[2] 
-       (.C(\count_reg[2]_0 ),
+       (.C(clk_IBUF_BUFG),
         .CE(1'b1),
         .D(\count[2]_i_1_n_0 ),
         .Q(\count_reg_n_0_[2] ),
@@ -157,14 +157,14 @@ endmodule
 
 (* ORIG_REF_NAME = "divisor_frecuencia" *) 
 module divisor_frecuencia_0
-   (clk_state,
-    clk_IBUF_BUFG);
-  output clk_state;
-  input clk_IBUF_BUFG;
+   (clk_state_reg_0,
+    clk_state_reg_1);
+  output clk_state_reg_0;
+  input clk_state_reg_1;
 
-  wire clk_IBUF_BUFG;
-  wire clk_state;
-  wire clk_state_i_1_n_0;
+  wire clk_state_i_1__1_n_0;
+  wire clk_state_reg_0;
+  wire clk_state_reg_1;
   wire \count[0]_i_1_n_0 ;
   wire \count[1]_i_1_n_0 ;
   wire \count[2]_i_1_n_0 ;
@@ -172,21 +172,105 @@ module divisor_frecuencia_0
   wire \count_reg_n_0_[1] ;
   wire \count_reg_n_0_[2] ;
 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  LUT4 #(
+    .INIT(16'h1FE0)) 
+    clk_state_i_1__1
+       (.I0(\count_reg_n_0_[1] ),
+        .I1(\count_reg_n_0_[0] ),
+        .I2(\count_reg_n_0_[2] ),
+        .I3(clk_state_reg_0),
+        .O(clk_state_i_1__1_n_0));
+  FDRE #(
+    .INIT(1'b0)) 
+    clk_state_reg
+       (.C(clk_state_reg_1),
+        .CE(1'b1),
+        .D(clk_state_i_1__1_n_0),
+        .Q(clk_state_reg_0),
+        .R(1'b0));
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  LUT3 #(
+    .INIT(8'h13)) 
+    \count[0]_i_1 
+       (.I0(\count_reg_n_0_[1] ),
+        .I1(\count_reg_n_0_[0] ),
+        .I2(\count_reg_n_0_[2] ),
+        .O(\count[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  LUT3 #(
+    .INIT(8'h06)) 
+    \count[1]_i_1 
+       (.I0(\count_reg_n_0_[1] ),
+        .I1(\count_reg_n_0_[0] ),
+        .I2(\count_reg_n_0_[2] ),
+        .O(\count[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  LUT3 #(
+    .INIT(8'h18)) 
+    \count[2]_i_1 
+       (.I0(\count_reg_n_0_[1] ),
+        .I1(\count_reg_n_0_[0] ),
+        .I2(\count_reg_n_0_[2] ),
+        .O(\count[2]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_reg[0] 
+       (.C(clk_state_reg_1),
+        .CE(1'b1),
+        .D(\count[0]_i_1_n_0 ),
+        .Q(\count_reg_n_0_[0] ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_reg[1] 
+       (.C(clk_state_reg_1),
+        .CE(1'b1),
+        .D(\count[1]_i_1_n_0 ),
+        .Q(\count_reg_n_0_[1] ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_reg[2] 
+       (.C(clk_state_reg_1),
+        .CE(1'b1),
+        .D(\count[2]_i_1_n_0 ),
+        .Q(\count_reg_n_0_[2] ),
+        .R(1'b0));
+endmodule
+
+(* ORIG_REF_NAME = "divisor_frecuencia" *) 
+module divisor_frecuencia_1
+   (clk_state,
+    \count_reg[2]_0 );
+  output clk_state;
+  input \count_reg[2]_0 ;
+
+  wire clk_state;
+  wire clk_state_i_1__0_n_0;
+  wire \count[0]_i_1_n_0 ;
+  wire \count[1]_i_1_n_0 ;
+  wire \count[2]_i_1_n_0 ;
+  wire \count_reg[2]_0 ;
+  wire \count_reg_n_0_[0] ;
+  wire \count_reg_n_0_[1] ;
+  wire \count_reg_n_0_[2] ;
+
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'h1FE0)) 
-    clk_state_i_1
+    clk_state_i_1__0
        (.I0(\count_reg_n_0_[1] ),
         .I1(\count_reg_n_0_[0] ),
         .I2(\count_reg_n_0_[2] ),
         .I3(clk_state),
-        .O(clk_state_i_1_n_0));
+        .O(clk_state_i_1__0_n_0));
   FDRE #(
     .INIT(1'b0)) 
     clk_state_reg
-       (.C(clk_IBUF_BUFG),
+       (.C(\count_reg[2]_0 ),
         .CE(1'b1),
-        .D(clk_state_i_1_n_0),
+        .D(clk_state_i_1__0_n_0),
         .Q(clk_state),
         .R(1'b0));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
@@ -216,7 +300,7 @@ module divisor_frecuencia_0
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[0] 
-       (.C(clk_IBUF_BUFG),
+       (.C(\count_reg[2]_0 ),
         .CE(1'b1),
         .D(\count[0]_i_1_n_0 ),
         .Q(\count_reg_n_0_[0] ),
@@ -224,7 +308,7 @@ module divisor_frecuencia_0
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[1] 
-       (.C(clk_IBUF_BUFG),
+       (.C(\count_reg[2]_0 ),
         .CE(1'b1),
         .D(\count[1]_i_1_n_0 ),
         .Q(\count_reg_n_0_[1] ),
@@ -232,261 +316,39 @@ module divisor_frecuencia_0
   FDRE #(
     .INIT(1'b0)) 
     \count_reg[2] 
-       (.C(clk_IBUF_BUFG),
+       (.C(\count_reg[2]_0 ),
         .CE(1'b1),
         .D(\count[2]_i_1_n_0 ),
         .Q(\count_reg_n_0_[2] ),
         .R(1'b0));
-endmodule
-
-(* ORIG_REF_NAME = "divisor_frecuencia" *) 
-module divisor_frecuencia_1
-   (clk_state_reg_0,
-    clk_state);
-  output clk_state_reg_0;
-  input clk_state;
-
-  wire clk_state;
-  wire clk_state_i_1__0_n_0;
-  wire clk_state_reg_0;
-  wire \count[0]_i_1_n_0 ;
-  wire \count[1]_i_1_n_0 ;
-  wire \count[2]_i_1_n_0 ;
-  wire \count_reg_n_0_[0] ;
-  wire \count_reg_n_0_[1] ;
-  wire \count_reg_n_0_[2] ;
-
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT4 #(
-    .INIT(16'h1FE0)) 
-    clk_state_i_1__0
-       (.I0(\count_reg_n_0_[1] ),
-        .I1(\count_reg_n_0_[0] ),
-        .I2(\count_reg_n_0_[2] ),
-        .I3(clk_state_reg_0),
-        .O(clk_state_i_1__0_n_0));
-  FDRE #(
-    .INIT(1'b0)) 
-    clk_state_reg
-       (.C(clk_state),
-        .CE(1'b1),
-        .D(clk_state_i_1__0_n_0),
-        .Q(clk_state_reg_0),
-        .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT3 #(
-    .INIT(8'h13)) 
-    \count[0]_i_1 
-       (.I0(\count_reg_n_0_[1] ),
-        .I1(\count_reg_n_0_[0] ),
-        .I2(\count_reg_n_0_[2] ),
-        .O(\count[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT3 #(
-    .INIT(8'h06)) 
-    \count[1]_i_1 
-       (.I0(\count_reg_n_0_[1] ),
-        .I1(\count_reg_n_0_[0] ),
-        .I2(\count_reg_n_0_[2] ),
-        .O(\count[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'h18)) 
-    \count[2]_i_1 
-       (.I0(\count_reg_n_0_[1] ),
-        .I1(\count_reg_n_0_[0] ),
-        .I2(\count_reg_n_0_[2] ),
-        .O(\count[2]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \count_reg[0] 
-       (.C(clk_state),
-        .CE(1'b1),
-        .D(\count[0]_i_1_n_0 ),
-        .Q(\count_reg_n_0_[0] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \count_reg[1] 
-       (.C(clk_state),
-        .CE(1'b1),
-        .D(\count[1]_i_1_n_0 ),
-        .Q(\count_reg_n_0_[1] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \count_reg[2] 
-       (.C(clk_state),
-        .CE(1'b1),
-        .D(\count[2]_i_1_n_0 ),
-        .Q(\count_reg_n_0_[2] ),
-        .R(1'b0));
-endmodule
-
-(* ORIG_REF_NAME = "divisor_frecuencia" *) 
-module divisor_frecuencia__parameterized2
-   (clk_state_reg_0,
-    Q,
-    clk_IBUF_BUFG,
-    SR);
-  output clk_state_reg_0;
-  output [4:0]Q;
-  input clk_IBUF_BUFG;
-  input [0:0]SR;
-
-  wire [4:0]Q;
-  wire [0:0]SR;
-  wire clk_IBUF_BUFG;
-  wire clk_state_i_1__1_n_0;
-  wire clk_state_reg_0;
-  wire \count_reg_n_0_[0] ;
-  wire [5:0]p_0_in;
-
-  LUT6 #(
-    .INIT(64'h01FFFFFFFE000000)) 
-    clk_state_i_1__1
-       (.I0(Q[2]),
-        .I1(Q[1]),
-        .I2(Q[0]),
-        .I3(Q[3]),
-        .I4(Q[4]),
-        .I5(clk_state_reg_0),
-        .O(clk_state_i_1__1_n_0));
-  FDRE #(
-    .INIT(1'b0)) 
-    clk_state_reg
-       (.C(clk_IBUF_BUFG),
-        .CE(1'b1),
-        .D(clk_state_i_1__1_n_0),
-        .Q(clk_state_reg_0),
-        .R(1'b0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \count[0]_i_1 
-       (.I0(\count_reg_n_0_[0] ),
-        .O(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \count[1]_i_1 
-       (.I0(\count_reg_n_0_[0] ),
-        .I1(Q[0]),
-        .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
-  LUT3 #(
-    .INIT(8'h78)) 
-    \count[2]_i_1 
-       (.I0(\count_reg_n_0_[0] ),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
-  LUT4 #(
-    .INIT(16'h7F80)) 
-    \count[3]_i_1 
-       (.I0(Q[0]),
-        .I1(\count_reg_n_0_[0] ),
-        .I2(Q[1]),
-        .I3(Q[2]),
-        .O(p_0_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
-  LUT5 #(
-    .INIT(32'h7FFF8000)) 
-    \count[4]_i_1 
-       (.I0(Q[1]),
-        .I1(\count_reg_n_0_[0] ),
-        .I2(Q[0]),
-        .I3(Q[2]),
-        .I4(Q[3]),
-        .O(p_0_in[4]));
-  LUT6 #(
-    .INIT(64'h7FFFFFFF80000000)) 
-    \count[5]_i_1 
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(\count_reg_n_0_[0] ),
-        .I3(Q[1]),
-        .I4(Q[3]),
-        .I5(Q[4]),
-        .O(p_0_in[5]));
-  FDRE #(
-    .INIT(1'b0)) 
-    \count_reg[0] 
-       (.C(clk_IBUF_BUFG),
-        .CE(1'b1),
-        .D(p_0_in[0]),
-        .Q(\count_reg_n_0_[0] ),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \count_reg[1] 
-       (.C(clk_IBUF_BUFG),
-        .CE(1'b1),
-        .D(p_0_in[1]),
-        .Q(Q[0]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \count_reg[2] 
-       (.C(clk_IBUF_BUFG),
-        .CE(1'b1),
-        .D(p_0_in[2]),
-        .Q(Q[1]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \count_reg[3] 
-       (.C(clk_IBUF_BUFG),
-        .CE(1'b1),
-        .D(p_0_in[3]),
-        .Q(Q[2]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \count_reg[4] 
-       (.C(clk_IBUF_BUFG),
-        .CE(1'b1),
-        .D(p_0_in[4]),
-        .Q(Q[3]),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \count_reg[5] 
-       (.C(clk_IBUF_BUFG),
-        .CE(1'b1),
-        .D(p_0_in[5]),
-        .Q(Q[4]),
-        .R(SR));
 endmodule
 
 module maquina_cruce
-   (clk_state_reg,
+   (clk_state,
     Sem2_OBUF,
     Sem1_OBUF,
-    \count[0]_P_0 ,
-    clk_IBUF_BUFG,
+    clk_state_BUFG,
+    \count_reg[2] ,
     reset_IBUF,
     sensor_IBUF);
-  output clk_state_reg;
+  output clk_state;
   output [2:0]Sem2_OBUF;
   output [2:0]Sem1_OBUF;
-  input \count[0]_P_0 ;
-  input clk_IBUF_BUFG;
+  input clk_state_BUFG;
+  input \count_reg[2] ;
   input reset_IBUF;
   input sensor_IBUF;
 
   wire [2:0]Sem1_OBUF;
   wire [2:0]Sem2_OBUF;
-  wire clk_IBUF_BUFG;
   wire clk_state;
-  wire clk_state_reg;
+  wire clk_state_BUFG;
   wire [0:0]count3;
   wire \count[0]_C_n_0 ;
   wire \count[0]_LDC_i_1_n_0 ;
   wire \count[0]_LDC_i_2_n_0 ;
   wire \count[0]_LDC_i_3_n_0 ;
   wire \count[0]_LDC_n_0 ;
-  wire \count[0]_P_0 ;
   wire \count[0]_P_n_0 ;
   wire \count[10]_C_n_0 ;
   wire \count[10]_LDC_i_1_n_0 ;
@@ -719,6 +581,7 @@ module maquina_cruce
   wire \count[9]_LDC_i_4_n_0 ;
   wire \count[9]_LDC_n_0 ;
   wire \count[9]_P_n_0 ;
+  wire \count_reg[2] ;
   wire [31:1]data2;
   wire i__carry__0_i_1_n_0;
   wire i__carry__0_i_2_n_0;
@@ -823,17 +686,14 @@ module maquina_cruce
   wire [3:0]\NLW_nextstate_cruce1_inferred__4/i__carry__6_CO_UNCONNECTED ;
   wire [3:3]\NLW_nextstate_cruce1_inferred__4/i__carry__6_O_UNCONNECTED ;
 
-  divisor_frecuencia_0 PRESCALER
-       (.clk_IBUF_BUFG(clk_IBUF_BUFG),
-        .clk_state(clk_state));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \Sem1_OBUF[0]_inst_i_1 
        (.I0(nextstate_cruce[1]),
         .I1(nextstate_cruce[2]),
         .O(Sem1_OBUF[0]));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \Sem1_OBUF[1]_inst_i_1 
@@ -841,7 +701,7 @@ module maquina_cruce
         .I1(nextstate_cruce[2]),
         .I2(nextstate_cruce[1]),
         .O(Sem1_OBUF[1]));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT3 #(
     .INIT(8'hCD)) 
     \Sem1_OBUF[2]_inst_i_1 
@@ -849,14 +709,14 @@ module maquina_cruce
         .I1(nextstate_cruce[2]),
         .I2(nextstate_cruce[1]),
         .O(Sem1_OBUF[2]));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \Sem2_OBUF[0]_inst_i_1 
        (.I0(nextstate_cruce[2]),
         .I1(nextstate_cruce[1]),
         .O(Sem2_OBUF[0]));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \Sem2_OBUF[1]_inst_i_1 
@@ -864,7 +724,7 @@ module maquina_cruce
         .I1(nextstate_cruce[0]),
         .I2(nextstate_cruce[2]),
         .O(Sem2_OBUF[1]));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \Sem2_OBUF[2]_inst_i_1 
@@ -874,16 +734,16 @@ module maquina_cruce
         .O(Sem2_OBUF[2]));
   divisor_frecuencia_1 TIMER
        (.clk_state(clk_state),
-        .clk_state_reg_0(clk_state_reg));
+        .\count_reg[2]_0 (\count_reg[2] ));
   FDCE #(
     .INIT(1'b0)) 
     \count[0]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[0]_LDC_i_2_n_0 ),
         .D(p_2_in[0]),
         .Q(\count[0]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT4 #(
     .INIT(16'hA959)) 
     \count[0]_C_i_1 
@@ -942,7 +802,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[0]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[0]),
         .PRE(\count[0]_LDC_i_1_n_0 ),
@@ -950,12 +810,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[10]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[10]_LDC_i_2_n_0 ),
         .D(p_2_in[10]),
         .Q(\count[10]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[10]_C_i_1 
@@ -994,7 +854,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[10]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[10]_LDC_i_3 
@@ -1014,7 +874,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[10]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[10]),
         .PRE(\count[10]_LDC_i_1_n_0 ),
@@ -1022,12 +882,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[11]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[11]_LDC_i_2_n_0 ),
         .D(p_2_in[11]),
         .Q(\count[11]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[11]_C_i_1 
@@ -1066,7 +926,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[11]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[11]_LDC_i_3 
@@ -1086,7 +946,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[11]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[11]),
         .PRE(\count[11]_LDC_i_1_n_0 ),
@@ -1094,12 +954,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[12]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[12]_LDC_i_2_n_0 ),
         .D(p_2_in[12]),
         .Q(\count[12]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[12]_C_i_1 
@@ -1138,7 +998,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[12]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[12]_LDC_i_3 
@@ -1158,7 +1018,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[12]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[12]),
         .PRE(\count[12]_LDC_i_1_n_0 ),
@@ -1166,12 +1026,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[13]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[13]_LDC_i_2_n_0 ),
         .D(p_2_in[13]),
         .Q(\count[13]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[13]_C_i_1 
@@ -1210,7 +1070,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[13]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[13]_LDC_i_3 
@@ -1230,7 +1090,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[13]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[13]),
         .PRE(\count[13]_LDC_i_1_n_0 ),
@@ -1238,12 +1098,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[14]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[14]_LDC_i_2_n_0 ),
         .D(p_2_in[14]),
         .Q(\count[14]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[14]_C_i_1 
@@ -1282,7 +1142,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[14]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[14]_LDC_i_3 
@@ -1302,7 +1162,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[14]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[14]),
         .PRE(\count[14]_LDC_i_1_n_0 ),
@@ -1310,12 +1170,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[15]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[15]_LDC_i_2_n_0 ),
         .D(p_2_in[15]),
         .Q(\count[15]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[15]_C_i_1 
@@ -1354,7 +1214,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[15]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[15]_LDC_i_3 
@@ -1374,7 +1234,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[15]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[15]),
         .PRE(\count[15]_LDC_i_1_n_0 ),
@@ -1382,12 +1242,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[16]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[16]_LDC_i_2_n_0 ),
         .D(p_2_in[16]),
         .Q(\count[16]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[16]_C_i_1 
@@ -1426,7 +1286,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[16]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[16]_LDC_i_3 
@@ -1446,7 +1306,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[16]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[16]),
         .PRE(\count[16]_LDC_i_1_n_0 ),
@@ -1454,12 +1314,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[17]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[17]_LDC_i_2_n_0 ),
         .D(p_2_in[17]),
         .Q(\count[17]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[17]_C_i_1 
@@ -1498,7 +1358,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[17]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[17]_LDC_i_3 
@@ -1518,7 +1378,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[17]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[17]),
         .PRE(\count[17]_LDC_i_1_n_0 ),
@@ -1526,12 +1386,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[18]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[18]_LDC_i_2_n_0 ),
         .D(p_2_in[18]),
         .Q(\count[18]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[18]_C_i_1 
@@ -1570,7 +1430,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[18]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[18]_LDC_i_3 
@@ -1590,7 +1450,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[18]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[18]),
         .PRE(\count[18]_LDC_i_1_n_0 ),
@@ -1598,12 +1458,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[19]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[19]_LDC_i_2_n_0 ),
         .D(p_2_in[19]),
         .Q(\count[19]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[19]_C_i_1 
@@ -1642,7 +1502,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[19]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[19]_LDC_i_3 
@@ -1662,7 +1522,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[19]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[19]),
         .PRE(\count[19]_LDC_i_1_n_0 ),
@@ -1670,12 +1530,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[1]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[1]_LDC_i_2_n_0 ),
         .D(p_2_in[1]),
         .Q(\count[1]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[1]_C_i_1 
@@ -1742,7 +1602,7 @@ module maquina_cruce
         .I4(reset_IBUF),
         .I5(sensor_IBUF),
         .O(\count[1]_LDC_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[1]_LDC_i_6 
@@ -1750,7 +1610,7 @@ module maquina_cruce
         .I1(\count[1]_LDC_n_0 ),
         .I2(\count[1]_C_n_0 ),
         .O(\count[1]_LDC_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \count[1]_LDC_i_7 
@@ -1760,7 +1620,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[1]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[1]),
         .PRE(\count[1]_LDC_i_1_n_0 ),
@@ -1768,12 +1628,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[20]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[20]_LDC_i_2_n_0 ),
         .D(p_2_in[20]),
         .Q(\count[20]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[20]_C_i_1 
@@ -1812,7 +1672,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[20]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[20]_LDC_i_3 
@@ -1832,7 +1692,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[20]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[20]),
         .PRE(\count[20]_LDC_i_1_n_0 ),
@@ -1840,12 +1700,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[21]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[21]_LDC_i_2_n_0 ),
         .D(p_2_in[21]),
         .Q(\count[21]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[21]_C_i_1 
@@ -1884,7 +1744,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[21]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[21]_LDC_i_3 
@@ -1904,7 +1764,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[21]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[21]),
         .PRE(\count[21]_LDC_i_1_n_0 ),
@@ -1912,12 +1772,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[22]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[22]_LDC_i_2_n_0 ),
         .D(p_2_in[22]),
         .Q(\count[22]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[22]_C_i_1 
@@ -1956,7 +1816,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[22]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[22]_LDC_i_3 
@@ -1976,7 +1836,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[22]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[22]),
         .PRE(\count[22]_LDC_i_1_n_0 ),
@@ -1984,12 +1844,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[23]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[23]_LDC_i_2_n_0 ),
         .D(p_2_in[23]),
         .Q(\count[23]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[23]_C_i_1 
@@ -2028,7 +1888,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[23]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[23]_LDC_i_3 
@@ -2048,7 +1908,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[23]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[23]),
         .PRE(\count[23]_LDC_i_1_n_0 ),
@@ -2056,12 +1916,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[24]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[24]_LDC_i_2_n_0 ),
         .D(p_2_in[24]),
         .Q(\count[24]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[24]_C_i_1 
@@ -2100,7 +1960,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[24]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[24]_LDC_i_3 
@@ -2120,7 +1980,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[24]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[24]),
         .PRE(\count[24]_LDC_i_1_n_0 ),
@@ -2128,12 +1988,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[25]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[25]_LDC_i_2_n_0 ),
         .D(p_2_in[25]),
         .Q(\count[25]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[25]_C_i_1 
@@ -2172,7 +2032,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[25]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[25]_LDC_i_3 
@@ -2192,7 +2052,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[25]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[25]),
         .PRE(\count[25]_LDC_i_1_n_0 ),
@@ -2200,12 +2060,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[26]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[26]_LDC_i_2_n_0 ),
         .D(p_2_in[26]),
         .Q(\count[26]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[26]_C_i_1 
@@ -2244,7 +2104,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[26]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[26]_LDC_i_3 
@@ -2264,7 +2124,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[26]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[26]),
         .PRE(\count[26]_LDC_i_1_n_0 ),
@@ -2272,12 +2132,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[27]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[27]_LDC_i_2_n_0 ),
         .D(p_2_in[27]),
         .Q(\count[27]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[27]_C_i_1 
@@ -2316,7 +2176,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[27]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[27]_LDC_i_3 
@@ -2336,7 +2196,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[27]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[27]),
         .PRE(\count[27]_LDC_i_1_n_0 ),
@@ -2344,12 +2204,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[28]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[28]_LDC_i_2_n_0 ),
         .D(p_2_in[28]),
         .Q(\count[28]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[28]_C_i_1 
@@ -2388,7 +2248,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[28]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[28]_LDC_i_3 
@@ -2408,7 +2268,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[28]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[28]),
         .PRE(\count[28]_LDC_i_1_n_0 ),
@@ -2416,12 +2276,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[29]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[29]_LDC_i_2_n_0 ),
         .D(p_2_in[29]),
         .Q(\count[29]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[29]_C_i_1 
@@ -2460,7 +2320,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[29]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[29]_LDC_i_3 
@@ -2480,7 +2340,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[29]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[29]),
         .PRE(\count[29]_LDC_i_1_n_0 ),
@@ -2488,12 +2348,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[2]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[2]_LDC_i_2_n_0 ),
         .D(p_2_in[2]),
         .Q(\count[2]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[2]_C_i_1 
@@ -2560,7 +2420,7 @@ module maquina_cruce
         .I4(reset_IBUF),
         .I5(nextstate_cruce[1]),
         .O(\count[2]_LDC_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \count[2]_LDC_i_6 
@@ -2576,7 +2436,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[2]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[2]),
         .PRE(\count[2]_LDC_i_1_n_0 ),
@@ -2584,12 +2444,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[30]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[30]_LDC_i_2_n_0 ),
         .D(p_2_in[30]),
         .Q(\count[30]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[30]_C_i_1 
@@ -2628,7 +2488,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[30]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[30]_LDC_i_3 
@@ -2648,7 +2508,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[30]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[30]),
         .PRE(\count[30]_LDC_i_1_n_0 ),
@@ -2656,12 +2516,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[31]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[31]_LDC_i_2_n_0 ),
         .D(p_2_in[31]),
         .Q(\count[31]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[31]_C_i_1 
@@ -2765,7 +2625,7 @@ module maquina_cruce
         .I4(nextstate_cruce[0]),
         .I5(reset_IBUF),
         .O(\count[31]_LDC_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[31]_LDC_i_6 
@@ -2800,7 +2660,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[31]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[31]),
         .PRE(\count[31]_LDC_i_1_n_0 ),
@@ -2808,12 +2668,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[3]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[3]_LDC_i_2_n_0 ),
         .D(p_2_in[3]),
         .Q(\count[3]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[3]_C_i_1 
@@ -2852,7 +2712,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[3]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[3]_LDC_i_3 
@@ -2872,7 +2732,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[3]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[3]),
         .PRE(\count[3]_LDC_i_1_n_0 ),
@@ -2880,12 +2740,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[4]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[4]_LDC_i_2_n_0 ),
         .D(p_2_in[4]),
         .Q(\count[4]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[4]_C_i_1 
@@ -2924,7 +2784,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[4]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[4]_LDC_i_3 
@@ -2944,7 +2804,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[4]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[4]),
         .PRE(\count[4]_LDC_i_1_n_0 ),
@@ -2952,12 +2812,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[5]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[5]_LDC_i_2_n_0 ),
         .D(p_2_in[5]),
         .Q(\count[5]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[5]_C_i_1 
@@ -2996,7 +2856,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[5]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[5]_LDC_i_3 
@@ -3016,7 +2876,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[5]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[5]),
         .PRE(\count[5]_LDC_i_1_n_0 ),
@@ -3024,12 +2884,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[6]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[6]_LDC_i_2_n_0 ),
         .D(p_2_in[6]),
         .Q(\count[6]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[6]_C_i_1 
@@ -3068,7 +2928,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[6]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[6]_LDC_i_3 
@@ -3088,7 +2948,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[6]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[6]),
         .PRE(\count[6]_LDC_i_1_n_0 ),
@@ -3096,12 +2956,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[7]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[7]_LDC_i_2_n_0 ),
         .D(p_2_in[7]),
         .Q(\count[7]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[7]_C_i_1 
@@ -3140,7 +3000,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[7]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[7]_LDC_i_3 
@@ -3160,7 +3020,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[7]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[7]),
         .PRE(\count[7]_LDC_i_1_n_0 ),
@@ -3168,12 +3028,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[8]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[8]_LDC_i_2_n_0 ),
         .D(p_2_in[8]),
         .Q(\count[8]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[8]_C_i_1 
@@ -3212,7 +3072,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[8]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[8]_LDC_i_3 
@@ -3232,7 +3092,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[8]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[8]),
         .PRE(\count[8]_LDC_i_1_n_0 ),
@@ -3240,12 +3100,12 @@ module maquina_cruce
   FDCE #(
     .INIT(1'b0)) 
     \count[9]_C 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .CLR(\count[9]_LDC_i_2_n_0 ),
         .D(p_2_in[9]),
         .Q(\count[9]_C_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \count[9]_C_i_1 
@@ -3284,7 +3144,7 @@ module maquina_cruce
         .I4(\count[31]_LDC_i_7_n_0 ),
         .I5(\count[31]_LDC_i_9_n_0 ),
         .O(\count[9]_LDC_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \count[9]_LDC_i_3 
@@ -3304,7 +3164,7 @@ module maquina_cruce
   FDPE #(
     .INIT(1'b1)) 
     \count[9]_P 
-       (.C(\count[0]_P_0 ),
+       (.C(clk_state_BUFG),
         .CE(1'b1),
         .D(p_2_in[9]),
         .PRE(\count[9]_LDC_i_1_n_0 ),
@@ -3816,7 +3676,7 @@ module maquina_cruce
         .G(\nextstate_cruce_reg[2]_i_2_n_0 ),
         .GE(1'b1),
         .Q(nextstate_cruce[0]));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT4 #(
     .INIT(16'h1001)) 
     \nextstate_cruce_reg[0]_i_1 
@@ -3834,7 +3694,7 @@ module maquina_cruce
         .G(\nextstate_cruce_reg[2]_i_2_n_0 ),
         .GE(1'b1),
         .Q(nextstate_cruce[1]));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT4 #(
     .INIT(16'h545C)) 
     \nextstate_cruce_reg[1]_i_1 
@@ -3852,7 +3712,7 @@ module maquina_cruce
         .G(\nextstate_cruce_reg[2]_i_2_n_0 ),
         .GE(1'b1),
         .Q(nextstate_cruce[2]));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \nextstate_cruce_reg[2]_i_1 
@@ -3989,7 +3849,7 @@ module maquina_cruce
         .I4(\nextstate_cruce_reg[2]_i_11_n_0 ),
         .I5(\nextstate_cruce_reg[2]_i_12_n_0 ),
         .O(\nextstate_cruce_reg[2]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \nextstate_cruce_reg[2]_i_7 
@@ -4025,7 +3885,7 @@ module maquina_paso
     Sem3_OBUF,
     Sem_peatones_OBUF,
     display_OBUF,
-    clk_IBUF_BUFG,
+    \sreg_reg[2] ,
     reset_IBUF,
     btn_out,
     D,
@@ -4035,7 +3895,7 @@ module maquina_paso
   output [2:0]Sem3_OBUF;
   output [1:0]Sem_peatones_OBUF;
   output [6:0]display_OBUF;
-  input clk_IBUF_BUFG;
+  input \sreg_reg[2] ;
   input reset_IBUF;
   input btn_out;
   input [0:0]D;
@@ -4044,13 +3904,10 @@ module maquina_paso
   wire CLK;
   wire [0:0]D;
   wire \MAQUINA_SEMAFORO_CRUCE/nextstate_cruce2 ;
-  wire PRESCALER_n_0;
   wire Q1_reg;
   wire [2:0]Sem3_OBUF;
   wire [1:0]Sem_peatones_OBUF;
   wire btn_out;
-  wire clear;
-  wire clk_IBUF_BUFG;
   wire clk_state_reg;
   wire [2:0]code;
   wire \code_reg[0]_i_1_n_0 ;
@@ -4281,7 +4138,6 @@ module maquina_paso
   wire \count_reg[9]__0_LDC_i_2_n_0 ;
   wire \count_reg[9]__0_LDC_n_0 ;
   wire \count_reg[9]__0_P_n_0 ;
-  wire [5:1]count_reg_0;
   wire [6:0]display_OBUF;
   wire mod_sync_n_0;
   wire \nextstate_paso[0]_C_i_1_n_0 ;
@@ -4290,6 +4146,7 @@ module maquina_paso
   wire \nextstate_paso_reg[1]_LDC_n_0 ;
   wire \nextstate_paso_reg[1]_P_n_0 ;
   wire reset_IBUF;
+  wire \sreg_reg[2] ;
   wire [2:0]NLW_count_reg0_carry_CO_UNCONNECTED;
   wire [2:0]NLW_count_reg0_carry__0_CO_UNCONNECTED;
   wire [2:0]NLW_count_reg0_carry__1_CO_UNCONNECTED;
@@ -4303,28 +4160,14 @@ module maquina_paso
   decodificador_7_segm Decoder_7_segmentos
        (.Q(code),
         .display_OBUF({display_OBUF[6:5],display_OBUF[3:0]}));
-  divisor_frecuencia__parameterized2 PRESCALER
-       (.Q(count_reg_0),
-        .SR(clear),
-        .clk_IBUF_BUFG(clk_IBUF_BUFG),
-        .clk_state_reg_0(PRESCALER_n_0));
-  LUT5 #(
-    .INIT(32'h88888880)) 
-    \PRESCALER/ 
-       (.I0(count_reg_0[5]),
-        .I1(count_reg_0[4]),
-        .I2(count_reg_0[1]),
-        .I3(count_reg_0[2]),
-        .I4(count_reg_0[3]),
-        .O(clear));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Sem3_OBUF[0]_inst_i_1 
        (.I0(\nextstate_paso_reg[1]_LDC_n_0 ),
         .I1(\nextstate_paso_reg[1]_P_n_0 ),
         .O(Sem3_OBUF[0]));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT3 #(
     .INIT(8'h2A)) 
     \Sem3_OBUF[1]_inst_i_1 
@@ -4332,7 +4175,7 @@ module maquina_paso
         .I1(\nextstate_paso_reg[1]_P_n_0 ),
         .I2(\nextstate_paso_reg[1]_LDC_n_0 ),
         .O(Sem3_OBUF[1]));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT3 #(
     .INIT(8'h15)) 
     \Sem3_OBUF[2]_inst_i_1 
@@ -4340,7 +4183,7 @@ module maquina_paso
         .I1(\nextstate_paso_reg[1]_P_n_0 ),
         .I2(\nextstate_paso_reg[1]_LDC_n_0 ),
         .O(Sem3_OBUF[2]));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT3 #(
     .INIT(8'hBF)) 
     \Sem_peatones_OBUF[0]_inst_i_1 
@@ -4348,7 +4191,7 @@ module maquina_paso
         .I1(\nextstate_paso_reg[1]_P_n_0 ),
         .I2(\nextstate_paso_reg[1]_LDC_n_0 ),
         .O(Sem_peatones_OBUF[0]));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \Sem_peatones_OBUF[1]_inst_i_1 
@@ -4356,9 +4199,9 @@ module maquina_paso
         .I1(\nextstate_paso_reg[1]_P_n_0 ),
         .I2(\nextstate_paso_reg[0]_C_n_0 ),
         .O(Sem_peatones_OBUF[1]));
-  divisor_frecuencia TIMER
+  divisor_frecuencia_0 TIMER
        (.clk_state_reg_0(clk_state_reg),
-        .\count_reg[2]_0 (PRESCALER_n_0));
+        .clk_state_reg_1(\sreg_reg[2] ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
@@ -4388,7 +4231,7 @@ module maquina_paso
         .I4(\count_reg[3]__0_LDC_n_0 ),
         .I5(\code_reg[2]_i_10_n_0 ),
         .O(\code_reg[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \code_reg[0]_i_3 
@@ -4523,7 +4366,7 @@ module maquina_paso
        (.I0(\count_reg[16]__0_LDC_n_0 ),
         .I1(\count_reg[16]__0_P_n_0 ),
         .O(\code_reg[2]_i_19_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT4 #(
     .INIT(16'h0040)) 
     \code_reg[2]_i_2 
@@ -4617,11 +4460,11 @@ module maquina_paso
         .O(\count[0]__0_C_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h1)) 
-    \count[0]_i_1__0 
+    \count[0]_i_1 
        (.I0(\count_reg[0]__0_C_n_0 ),
         .I1(\count_reg[0]__0_LDC_n_0 ),
         .O(count_reg0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT2 #(
     .INIT(4'hD)) 
     \count[1]__0_C_i_1 
@@ -5094,7 +4937,7 @@ module maquina_paso
         .G(\count_reg[0]__0_LDC_i_1_n_0 ),
         .GE(1'b1),
         .Q(\count_reg[0]__0_LDC_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT5 #(
     .INIT(32'h00000070)) 
     \count_reg[0]__0_LDC_i_1 
@@ -5568,7 +5411,7 @@ module maquina_paso
         .G(\count_reg[1]__0_LDC_i_1_n_0 ),
         .GE(1'b1),
         .Q(\count_reg[1]__0_LDC_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT5 #(
     .INIT(32'h00150000)) 
     \count_reg[1]__0_LDC_i_1 
@@ -6457,13 +6300,13 @@ module maquina_paso
   modulo_antirrebote mod_debouncer
        (.Q1_reg_0(Q1_reg),
         .Q1_reg_1(mod_sync_n_0),
-        .clk_IBUF_BUFG(clk_IBUF_BUFG),
+        .Q3_reg_0(\sreg_reg[2] ),
         .reset_IBUF(reset_IBUF));
   modulo_sincronizacion mod_sync
        (.D(D),
-        .clk_IBUF_BUFG(clk_IBUF_BUFG),
         .\one_pipeline.sync_out_reg_0 (mod_sync_n_0),
-        .reset_IBUF(reset_IBUF));
+        .reset_IBUF(reset_IBUF),
+        .\sreg_reg[2]_0 (\sreg_reg[2] ));
   LUT4 #(
     .INIT(16'hFF15)) 
     \nextstate_paso[0]_C_i_1 
@@ -6510,11 +6353,11 @@ endmodule
 module modulo_antirrebote
    (Q1_reg_0,
     Q1_reg_1,
-    clk_IBUF_BUFG,
+    Q3_reg_0,
     reset_IBUF);
   output Q1_reg_0;
   input Q1_reg_1;
-  input clk_IBUF_BUFG;
+  input Q3_reg_0;
   input reset_IBUF;
 
   wire Q1;
@@ -6524,18 +6367,18 @@ module modulo_antirrebote
   wire Q2_i_1_n_0;
   wire Q3;
   wire Q3_i_1_n_0;
-  wire clk_IBUF_BUFG;
+  wire Q3_reg_0;
   wire reset_IBUF;
 
   FDRE #(
     .INIT(1'b0)) 
     Q1_reg
-       (.C(clk_IBUF_BUFG),
+       (.C(Q3_reg_0),
         .CE(1'b1),
         .D(Q1_reg_1),
         .Q(Q1),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT2 #(
     .INIT(4'h8)) 
     Q2_i_1
@@ -6545,7 +6388,7 @@ module modulo_antirrebote
   FDRE #(
     .INIT(1'b0)) 
     Q2_reg
-       (.C(clk_IBUF_BUFG),
+       (.C(Q3_reg_0),
         .CE(1'b1),
         .D(Q2_i_1_n_0),
         .Q(Q2),
@@ -6559,12 +6402,12 @@ module modulo_antirrebote
   FDRE #(
     .INIT(1'b0)) 
     Q3_reg
-       (.C(clk_IBUF_BUFG),
+       (.C(Q3_reg_0),
         .CE(1'b1),
         .D(Q3_i_1_n_0),
         .Q(Q3),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT3 #(
     .INIT(8'h20)) 
     btn_out
@@ -6576,19 +6419,19 @@ endmodule
 
 module modulo_sincronizacion
    (\one_pipeline.sync_out_reg_0 ,
-    clk_IBUF_BUFG,
+    \sreg_reg[2]_0 ,
     reset_IBUF,
     D);
   output \one_pipeline.sync_out_reg_0 ;
-  input clk_IBUF_BUFG;
+  input \sreg_reg[2]_0 ;
   input reset_IBUF;
   input [0:0]D;
 
   wire [0:0]D;
-  wire clk_IBUF_BUFG;
   wire \one_pipeline.sync_out_reg_0 ;
   wire reset_IBUF;
   (* async_reg = "true" *) wire [2:0]sreg;
+  wire \sreg_reg[2]_0 ;
   wire sync_out;
 
   LUT2 #(
@@ -6600,7 +6443,7 @@ module modulo_sincronizacion
   FDRE #(
     .INIT(1'b0)) 
     \one_pipeline.sync_out_reg 
-       (.C(clk_IBUF_BUFG),
+       (.C(\sreg_reg[2]_0 ),
         .CE(1'b1),
         .D(sreg[2]),
         .Q(sync_out),
@@ -6612,7 +6455,7 @@ module modulo_sincronizacion
     .INIT(1'b0),
     .XON("FALSE")) 
     \sreg_reg[0] 
-       (.C(clk_IBUF_BUFG),
+       (.C(\sreg_reg[2]_0 ),
         .CE(1'b1),
         .D(D),
         .Q(sreg[0]),
@@ -6624,7 +6467,7 @@ module modulo_sincronizacion
     .INIT(1'b0),
     .XON("FALSE")) 
     \sreg_reg[1] 
-       (.C(clk_IBUF_BUFG),
+       (.C(\sreg_reg[2]_0 ),
         .CE(1'b1),
         .D(sreg[0]),
         .Q(sreg[1]),
@@ -6636,14 +6479,14 @@ module modulo_sincronizacion
     .INIT(1'b0),
     .XON("FALSE")) 
     \sreg_reg[2] 
-       (.C(clk_IBUF_BUFG),
+       (.C(\sreg_reg[2]_0 ),
         .CE(1'b1),
         .D(sreg[1]),
         .Q(sreg[2]),
         .R(1'b0));
 endmodule
 
-(* ECO_CHECKSUM = "192de32f" *) (* N_digitos = "8" *) (* N_luces = "3" *) 
+(* ECO_CHECKSUM = "954c0c21" *) (* N_digitos = "8" *) (* N_luces = "3" *) 
 (* N_luces_peat = "2" *) (* N_segmentos = "7" *) 
 (* NotValidForBitStream *)
 module trabajo
@@ -6668,9 +6511,9 @@ module trabajo
   output [6:0]display;
   output [7:0]digctrl;
 
-  wire MAQUINA_SEMAFORO_CRUCE_n_0;
   wire MAQUINA_SEMAFORO_PASO_n_0;
   wire MAQUINA_SEMAFORO_PASO_n_1;
+  wire PRESCALER_n_0;
   wire [2:0]Sem1;
   wire [2:0]Sem1_OBUF;
   wire [2:0]Sem2;
@@ -6685,7 +6528,8 @@ module trabajo
   wire clk;
   wire clk_IBUF;
   wire clk_IBUF_BUFG;
-  wire \count[31]_C_i_2_n_0 ;
+  wire clk_state;
+  wire clk_state_BUFG;
   wire \count_reg[31]_i_1_n_0 ;
   wire [7:0]digctrl;
   wire [6:0]display;
@@ -6701,9 +6545,9 @@ end
   maquina_cruce MAQUINA_SEMAFORO_CRUCE
        (.Sem1_OBUF(Sem1_OBUF),
         .Sem2_OBUF(Sem2_OBUF),
-        .clk_IBUF_BUFG(clk_IBUF_BUFG),
-        .clk_state_reg(MAQUINA_SEMAFORO_CRUCE_n_0),
-        .\count[0]_P_0 (\count[31]_C_i_2_n_0 ),
+        .clk_state(clk_state),
+        .clk_state_BUFG(clk_state_BUFG),
+        .\count_reg[2] (PRESCALER_n_0),
         .reset_IBUF(reset_IBUF),
         .sensor_IBUF(sensor_IBUF));
   maquina_paso MAQUINA_SEMAFORO_PASO
@@ -6713,10 +6557,13 @@ end
         .Sem3_OBUF(Sem3_OBUF),
         .Sem_peatones_OBUF(Sem_peatones_OBUF),
         .btn_out(btn_out),
-        .clk_IBUF_BUFG(clk_IBUF_BUFG),
         .clk_state_reg(MAQUINA_SEMAFORO_PASO_n_1),
         .display_OBUF(display_OBUF),
-        .reset_IBUF(reset_IBUF));
+        .reset_IBUF(reset_IBUF),
+        .\sreg_reg[2] (PRESCALER_n_0));
+  divisor_frecuencia PRESCALER
+       (.clk_IBUF_BUFG(clk_IBUF_BUFG),
+        .clk_state_reg_0(PRESCALER_n_0));
   OBUF \Sem1_OBUF[0]_inst 
        (.I(Sem1_OBUF[0]),
         .O(Sem1[0]));
@@ -6759,9 +6606,9 @@ end
   IBUF clk_IBUF_inst
        (.I(clk),
         .O(clk_IBUF));
-  BUFG \count[31]_C_i_2 
-       (.I(MAQUINA_SEMAFORO_CRUCE_n_0),
-        .O(\count[31]_C_i_2_n_0 ));
+  BUFG clk_state_BUFG_inst
+       (.I(clk_state),
+        .O(clk_state_BUFG));
   BUFG \count_reg[31]_i_1 
        (.I(MAQUINA_SEMAFORO_PASO_n_1),
         .O(\count_reg[31]_i_1_n_0 ));

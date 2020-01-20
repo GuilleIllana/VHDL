@@ -49,7 +49,9 @@ entity maquina_cruce is
         --ELEMENTOS NECESARIOS PARA EL FUNCIONAMIENTO BÁSICO DE LOS SEMÁFOROS
         sensor: in STD_LOGIC;
         Sem1: out STD_LOGIC_VECTOR (N_luces - 1 downto 0);
-        Sem2: out STD_LOGIC_VECTOR (N_luces - 1 downto 0)  
+        Sem2: out STD_LOGIC_VECTOR (N_luces - 1 downto 0);
+        cuenta: out integer;
+        clk1: out std_logic
   );
   
 end maquina_cruce;
@@ -89,30 +91,20 @@ component divisor_frecuencia
 end component;
 
 --señales y constantes necesarias para los temporizadores y cuantas atrás síncronas
-constant module_prescaler: positive :=  100000000 / 10000000; --100MHz --> 100Hz
-constant module_timer: positive :=  10000000 / 1000000; --100Hz --> 1Hz
+constant module_timer: positive :=  100 / 1; --100Hz --> 1Hz
 
-signal clk1Hz, clk100Hz: STD_LOGIC;
+signal clk1Hz: STD_LOGIC;
 
 begin
 
 --COMPONENTES - ASIGNACIONES
-
-PRESCALER: divisor_frecuencia
-    generic map(
-        MODULE => module_prescaler
-    )
-    port map (
-        CLK_IN => clk,
-        CLK_OUT => clk100Hz
-    ); 
 
 TIMER: divisor_frecuencia
     generic map (
       MODULE => module_timer
     )
     port map (
-      CLK_IN  => clk100Hz,
+      CLK_IN  => clk,
       CLK_OUT => clk1Hz
     );
 
@@ -142,8 +134,8 @@ begin
 END PROCESS;
 
 
-NEXT_STATE_CRUCE_DECODE: PROCESS (reset, estado_cruce, clk)
-variable count: integer := 0;
+NEXT_STATE_CRUCE_DECODE: PROCESS (reset, estado_cruce, clk, clk1Hz)
+variable count: integer;
 begin
 
     if reset ='1' then
@@ -156,7 +148,6 @@ begin
         end if;
         
     elsif estado_cruce = S1 then
-       
         if clk1Hz'event and clk1Hz = '1' then
             count := count - 1;
         end if;
@@ -199,7 +190,11 @@ begin
     end if;    
     
     estado_cruce <= nextstate_cruce;  
-        
+    
+    cuenta <= count;    
+    clk1 <= clk1Hz;
+    
 END PROCESS;
+
 
 end Behavioral;

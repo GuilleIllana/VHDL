@@ -94,10 +94,9 @@ component divisor_frecuencia
 end component;
 
 --señales y constantes necesariaspara los temporizadores y cuantas atrás síncronas
-constant module_prescaler: positive :=  1000000000 / 10000000; -- 100MHz -> 100Hz
-constant module_timer: positive :=  10000000 / 1000000; -- 100Hz -> 1Hz
+constant module_timer: positive :=  100 / 1; -- 100Hz -> 1Hz
 
-signal clk1Hz, clk100Hz: STD_LOGIC;
+signal clk1Hz: STD_LOGIC;
 
 --Declaración componente decodificador 7 segmentos
 Component decodificador_7_segm
@@ -159,21 +158,12 @@ PORT MAP(
         btn_out => boton_dev
 );
 
-PRESCALER: divisor_frecuencia
-    generic map (
-      MODULE => module_prescaler
-    )
-    port map (
-      CLK_IN  => clk,
-      CLk_OUT => clk100Hz
-    );
-
 TIMER: divisor_frecuencia
     generic map (
       MODULE => module_timer
     )
     port map (
-      CLK_IN  => clk100Hz,
+      CLK_IN  => clk,
       CLk_OUT => clk1Hz
     );
 
@@ -197,7 +187,7 @@ begin
 END PROCESS;
 
 
-NEXT_STATE_PASO_DECODE: PROCESS(reset, boton, clk, estado_paso)
+NEXT_STATE_PASO_DECODE: PROCESS(reset, boton, clk, estado_paso, clk1Hz)
 variable count: integer := 0;
 begin
     
@@ -205,7 +195,7 @@ begin
         nextstate_paso <= S0;
     
     elsif estado_paso = S0 then
-        if boton_dev'event and boton_dev = '1' then
+        if boton = '1' then
             nextstate_paso <= S1;
             count := C1;
         end if;

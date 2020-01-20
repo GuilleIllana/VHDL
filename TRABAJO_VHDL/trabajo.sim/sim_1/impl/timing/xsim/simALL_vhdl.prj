@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../trabajo.srcs/sources_1/new/SEM_CARRETERA_PPAL.vhd" \
+"../../../../../trabajo.srcs/sources_1/new/SEM_PEATONES.vhd" \
+"../../../../../trabajo.srcs/sources_1/new/decodificador_7_segm.vhd" \
+"../../../../../trabajo.srcs/sources_1/new/divisor_frecuencia.vhd" \
+"../../../../../trabajo.srcs/sources_1/new/maquina_paso.vhd" \
+"../../../../../trabajo.srcs/sources_1/new/modulo_antirrebote.vhd" \
+"../../../../../trabajo.srcs/sources_1/new/modulo_sincronizacion.vhd" \
+"../../../../../trabajo.srcs/sim_1/new/simALL.vhd" \
+
+# Do not sort compile order
+nosort
