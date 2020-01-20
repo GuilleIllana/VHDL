@@ -1,0 +1,118 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 1924
+License: Customer
+
+Current time: 	Mon Jan 20 18:02:47 CET 2020
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1366x768
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 47 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	D:/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Aitana
+User home directory: C:/Users/Aitana
+User working directory: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL
+User country: 	ES
+User language: 	es
+User locale: 	es_ES
+
+RDI_BASEROOT: D:/Vivado
+HDI_APPROOT: D:/Vivado/2019.1
+RDI_DATADIR: D:/Vivado/2019.1/data
+RDI_BINDIR: D:/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/Aitana/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/Aitana/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/Aitana/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	D:/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/vivado.log
+Vivado journal file location: 	C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/vivado.jou
+Engine tmp dir: 	C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/.Xil/Vivado-1924-LAPTOP-CG3U7DTI
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: D:/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Vivado/2019.1
+XILINX_SDK: D:/SDK/2019.1
+XILINX_VIVADO: D:/Vivado/2019.1
+XILINX_VIVADO_HLS: D:/Vivado/2019.1
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 618 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Aitana\Desktop\trabajo_vhdl\VHDL\TRABAJO_VHDL\trabajo.xpr. Version: Vivado v2019.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2019.1/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 108 MB (+111019kb) [00:00:18]
+// [Engine Memory]: 634 MB (+513268kb) [00:00:18]
+// WARNING: HEventQueue.dispatchEvent() is taking  5303 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 655 MB. GUI used memory: 49 MB. Current time: 1/20/20, 6:02:54 PM CET
+// [Engine Memory]: 675 MB (+9838kb) [00:00:23]
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 703.027 ; gain = 104.410 
+// Project name: trabajo; location: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // by (cl)
+// [Engine Memory]: 709 MB (+499kb) [00:00:26]
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (trabajo.vhd) elapsed time: 0.2s
+// Elapsed time: 121 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, trabajo(Behavioral) (trabajo.vhd)]", 1, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, trabajo(Behavioral) (trabajo.vhd)]", 1, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 715 MB. GUI used memory: 52 MB. Current time: 1/20/20, 6:04:59 PM CET

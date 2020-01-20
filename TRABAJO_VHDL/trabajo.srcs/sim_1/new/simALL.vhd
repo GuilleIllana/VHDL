@@ -72,5 +72,5 @@ conec: maquina_paso
     );
     
     boton <= '1' after 1000 ms , '0' after 1100 ms ;
-    clk1 <= not clk1 after 5 ms;
+    clk1 <= not clk1 after 500 ms;
 end Behavioral;

@@ -50,8 +50,7 @@ entity maquina_cruce is
         sensor: in STD_LOGIC;
         Sem1: out STD_LOGIC_VECTOR (N_luces - 1 downto 0);
         Sem2: out STD_LOGIC_VECTOR (N_luces - 1 downto 0);
-        cuenta: out integer;
-        clk1: out std_logic
+        cuenta: out integer
   );
   
 end maquina_cruce;
@@ -80,33 +79,21 @@ component SEM_CRUCE
 end component;
 
 --Declaración componente divisor de frecuencia
-component divisor_frecuencia
-  generic (
-    MODULE: positive
-  );
-  port(
-    CLK_IN : in  std_logic;
-    CLK_OUT: out std_logic
-  );
-end component;
+--component divisor_frecuencia
+--  generic (
+--    MODULE: positive
+--  );
+--  port(
+--    CLK_IN : in  std_logic;
+--    CLK_OUT: out std_logic
+--  );
+--end component;
 
---señales y constantes necesarias para los temporizadores y cuantas atrás síncronas
-constant module_timer: positive :=  100 / 1; --100Hz --> 1Hz
-
-signal clk1Hz: STD_LOGIC;
+--signal clk1Hz: STD_LOGIC;
 
 begin
 
 --COMPONENTES - ASIGNACIONES
-
-TIMER: divisor_frecuencia
-    generic map (
-      MODULE => module_timer
-    )
-    port map (
-      CLK_IN  => clk,
-      CLK_OUT => clk1Hz
-    );
 
 SEM1_DECODE: SEM_CARRETERA_PPAL
     port map (    
@@ -134,10 +121,10 @@ begin
 END PROCESS;
 
 
-NEXT_STATE_CRUCE_DECODE: PROCESS (reset, estado_cruce, clk, clk1Hz)
-variable count: integer;
+NEXT_STATE_CRUCE_DECODE: PROCESS (reset, estado_cruce, clk)
+variable count: integer := 0;
 begin
-
+if rising_edge(clk) then
     if reset ='1' then
         nextstate_cruce <= S0;
     
@@ -148,9 +135,7 @@ begin
         end if;
         
     elsif estado_cruce = S1 then
-        if clk1Hz'event and clk1Hz = '1' then
-            count := count - 1;
-        end if;
+        count := count - 1;
         if count = 0 then
             nextstate_cruce <= S2;
             count := C2;
@@ -158,28 +143,21 @@ begin
         
     
     elsif estado_cruce = S2 then
-        
-        if rising_edge(clk1Hz) then
-            count := count - 1;
-        end if;
+        count := count - 1;
         if count = 0 then
             nextstate_cruce <= S3;        
             count := C3;
         end if;
     
     elsif estado_cruce = S3 then
-        if rising_edge(clk1Hz) then 
         count := count - 1;
-        end if;
         if count = 0 then
             nextstate_cruce <= S4;
             count := C4;
         end if;
         
-    elsif estado_cruce = S4 then          
-        if rising_edge(clk1Hz) then
-         count := count - 1;         
-        end if;
+    elsif estado_cruce = S4 then 
+        count := count - 1;  
         if count = 0 then
             nextstate_cruce <= S0;
         end if;
@@ -188,11 +166,10 @@ begin
         nextstate_cruce <= S0;
     
     end if;    
-    
+end if;    
     estado_cruce <= nextstate_cruce;  
     
-    cuenta <= count;    
-    clk1 <= clk1Hz;
+    cuenta <= count;  
     
 END PROCESS;
 

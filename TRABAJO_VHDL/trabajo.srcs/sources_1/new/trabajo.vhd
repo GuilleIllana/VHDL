@@ -89,7 +89,8 @@ component divisor_frecuencia
 end component;
 
 constant module_prescaler: positive :=  100000000 / 100; --100MHz --> 100Hz
-signal clk100Hz: STD_LOGIC;
+constant module_timer: positive :=  100 / 1; --100Hz --> 1Hz
+signal clk100Hz, clk1Hz: STD_LOGIC;
 
 begin
 
@@ -98,7 +99,7 @@ digctrl <= "11111110";
 MAQUINA_SEMAFORO_CRUCE: maquina_cruce
     port map(
         reset => reset,
-        clk => clk100Hz,
+        clk => clk1Hz,
         sensor => sensor,
         Sem1 => Sem1,
         Sem2 => Sem2
@@ -107,7 +108,7 @@ MAQUINA_SEMAFORO_CRUCE: maquina_cruce
 MAQUINA_SEMAFORO_PASO: maquina_paso
     port map(
         reset => reset,
-        clk => clk100Hz,
+        clk => clk1Hz,
         boton => boton,
         Sem3 => Sem3,
         Sem_peat => Sem_peatones,
@@ -122,5 +123,14 @@ PRESCALER: divisor_frecuencia
         CLK_IN => clk,
         CLK_OUT => clk100Hz
     ); 
+
+TIMER: divisor_frecuencia
+    generic map (
+      MODULE => module_timer
+    )
+    port map (
+      CLK_IN  => clk100Hz,
+      CLK_OUT => clk1Hz
+    );
 
 end Behavioral;

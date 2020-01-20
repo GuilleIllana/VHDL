@@ -1,12 +1,4 @@
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/decodificador_7_segm.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'decodificador_7_segm'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/divisor_frecuencia.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'divisor_frecuencia'
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/maquina_paso.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'maquina_paso'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/modulo_antirrebote.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'modulo_antirrebote'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sources_1/new/modulo_sincronizacion.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'modulo_sincronizacion'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.srcs/sim_1/new/simALL.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'simALL'

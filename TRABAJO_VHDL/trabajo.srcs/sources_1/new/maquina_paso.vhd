@@ -94,9 +94,9 @@ component divisor_frecuencia
 end component;
 
 --señales y constantes necesariaspara los temporizadores y cuantas atrás síncronas
-constant module_timer: positive :=  100 / 1; -- 100Hz -> 1Hz
+--constant module_timer: positive :=  100 / 1; -- 100Hz -> 1Hz
 
-signal clk1Hz: STD_LOGIC;
+--signal clk1Hz: STD_LOGIC;
 
 --Declaración componente decodificador 7 segmentos
 Component decodificador_7_segm
@@ -158,15 +158,6 @@ PORT MAP(
         btn_out => boton_dev
 );
 
-TIMER: divisor_frecuencia
-    generic map (
-      MODULE => module_timer
-    )
-    port map (
-      CLK_IN  => clk,
-      CLk_OUT => clk1Hz
-    );
-
 Decoder_7_segmentos: decodificador_7_segm
     port map (
       code => code,
@@ -187,10 +178,10 @@ begin
 END PROCESS;
 
 
-NEXT_STATE_PASO_DECODE: PROCESS(reset, boton, clk, estado_paso, clk1Hz)
+NEXT_STATE_PASO_DECODE: PROCESS(reset, boton, clk, estado_paso)
 variable count: integer := 0;
 begin
-    
+if rising_edge(clk)then
     if reset ='1' then
         nextstate_paso <= S0;
     
@@ -201,10 +192,7 @@ begin
         end if;
         
     elsif estado_paso = S1 then
-       
-        if clk1Hz'event and clk1Hz = '1' then
         count := count - 1;
-        end if;
         if count = 0 then
             nextstate_paso <= S2;
             count := C2;
@@ -212,6 +200,7 @@ begin
         
     
     elsif estado_paso = S2 then
+        count := count - 1;
         case count is
             when 5 =>
                 code <= "0101";
@@ -226,28 +215,22 @@ begin
             when others =>
                 code <= "0000";
          end case;  
-         
-        if rising_edge(clk1Hz) then
-            count := count - 1;
-        end if;
+            
+        
         if count = 0 then
             nextstate_paso <= S3;        
             count := C3;
         end if;
     
     elsif estado_paso = S3 then
-        if rising_edge(clk1Hz) then 
         count := count - 1;
-        end if;
         if count = 0 then
             nextstate_paso <= S4;
             count := C4;
         end if;
         
-    elsif estado_paso = S4 then          
-        if rising_edge(clk1Hz) then
-            count := count - 1;         
-        end if;
+    elsif estado_paso = S4 then 
+        count := count - 1;
         if count = 0 then
             nextstate_paso <= S0;
         end if;
@@ -256,7 +239,7 @@ begin
         nextstate_paso <= S0;
     
     end if;    
-    
+ end if;   
     estado_paso <= nextstate_paso;  
         
 END PROCESS;

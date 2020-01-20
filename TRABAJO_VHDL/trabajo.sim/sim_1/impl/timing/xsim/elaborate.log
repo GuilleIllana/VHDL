@@ -17,7 +17,6 @@ Compiling architecture behavioral of entity xil_defaultlib.SEM_CARRETERA_PPAL [s
 Compiling architecture behavioral of entity xil_defaultlib.SEM_PEATONES [sem_peatones_default]
 Compiling architecture behavioral of entity xil_defaultlib.modulo_sincronizacion [modulo_sincronizacion_default]
 Compiling architecture behavioral of entity xil_defaultlib.modulo_antirrebote [modulo_antirrebote_default]
-Compiling architecture behavioral of entity xil_defaultlib.divisor_frecuencia [\divisor_frecuencia(module=100)\]
 Compiling architecture dataflow of entity xil_defaultlib.decodificador_7_segm [decodificador_7_segm_default]
 Compiling architecture behavioral of entity xil_defaultlib.maquina_paso [maquina_paso_default]
 Compiling architecture behavioral of entity xil_defaultlib.simall

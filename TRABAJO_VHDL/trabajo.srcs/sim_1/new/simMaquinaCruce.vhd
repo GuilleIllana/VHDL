@@ -44,16 +44,16 @@ component maquina_cruce
         sensor: in STD_LOGIC;
         Sem1: out STD_LOGIC_VECTOR (2 downto 0);
         Sem2: out STD_LOGIC_VECTOR (2 downto 0);
-        cuenta: out integer;
-        clk1: out std_logic
+        cuenta: out integer
+        --clk1: out std_logic
     );
 end component;
 
-    signal clk100Hz, reset : STD_LOGIC := '0';
+    signal clk, reset : STD_LOGIC := '0';
     signal sensor : STD_LOGIC := '0';
     signal  Sem1, Sem2 : STD_LOGIC_VECTOR(2 downto 0);
     signal cuenta: integer;
-    signal clk1Hz: std_logic;
+    --signal clk1Hz: std_logic;
  
 begin
 
@@ -61,16 +61,15 @@ begin
 conec: maquina_cruce 
     port map (
     reset => reset,
-    clk => clk100Hz, 
+    clk => clk, 
     sensor => sensor,
     Sem1 => Sem1,
     Sem2 => Sem2,
-    cuenta => cuenta,
-    clk1 => clk1Hz
+    cuenta => cuenta
     );
     sensor <= '1' after 1000ms , '0' after 3000 ms ;
     reset <= '1' after 10000 ms, '0' after 10100 ms;
     --sensor <= '1' after 3500ms, '0' after 3750 ms;
-    clk100Hz <= not clk100Hz after 5ms;
+    clk <= not clk after 500ms;
 
 end Behavioral;

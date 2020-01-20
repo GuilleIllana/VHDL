@@ -1,11 +1,8 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.sim/sim_1/impl/timing/xsim/simALL_time_impl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module decodificador_7_segm
 INFO: [VRFC 10-311] analyzing module divisor_frecuencia
-INFO: [VRFC 10-311] analyzing module divisor_frecuencia_0
-INFO: [VRFC 10-311] analyzing module divisor_frecuencia_1
+INFO: [VRFC 10-311] analyzing module divisor_frecuencia__parameterized1
 INFO: [VRFC 10-311] analyzing module maquina_cruce
 INFO: [VRFC 10-311] analyzing module maquina_paso
-INFO: [VRFC 10-311] analyzing module modulo_antirrebote
-INFO: [VRFC 10-311] analyzing module modulo_sincronizacion
 INFO: [VRFC 10-311] analyzing module trabajo
 INFO: [VRFC 10-311] analyzing module glbl
