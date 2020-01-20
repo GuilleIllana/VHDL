@@ -1,5 +1,7 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
+"../../../../../trabajo.srcs/sources_1/new/SEM_CARRETERA_PPAL.vhd" \
+"../../../../../trabajo.srcs/sources_1/new/SEM_CRUCE.vhd" \
 "../../../../../trabajo.srcs/sources_1/new/divisor_frecuencia.vhd" \
 "../../../../../trabajo.srcs/sources_1/new/maquina_cruce.vhd" \
 "../../../../../trabajo.srcs/sim_1/new/simMaquinaCruce.vhd" \

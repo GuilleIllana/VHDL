@@ -2,27 +2,24 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sat Jan 18 15:45:50 2020
-# Process ID: 3276
+# Start of session at: Sun Jan 19 15:58:30 2020
+# Process ID: 19052
 # Current directory: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10604 C:\Users\Aitana\Desktop\trabajo_vhdl\VHDL\TRABAJO_VHDL\trabajo.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21048 C:\Users\Aitana\Desktop\trabajo_vhdl\VHDL\TRABAJO_VHDL\trabajo.xpr
 # Log file: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/vivado.log
 # Journal file: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.xpr
 update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
+reset_run impl_1
 reset_run synth_1
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
 launch_runs impl_1 -jobs 4
 wait_on_run impl_1
 open_run impl_1
-reset_run impl_1
+set_property -name {xsim.simulate.runtime} -value {20ms} -objects [get_filesets sim_1]
+reset_run synth_1
 launch_runs impl_1 -jobs 4
 wait_on_run impl_1
 refresh_design
-synth_design -rtl -name rtl_1
-synth_design -rtl -name rtl_1
+launch_simulation -mode post-implementation -type timing

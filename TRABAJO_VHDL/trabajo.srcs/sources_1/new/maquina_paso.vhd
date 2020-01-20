@@ -38,6 +38,7 @@ entity maquina_paso is
         N_luces_peat : positive:= 2;
         N_segmentos : positive := 7;
         N_code : positive := 4;
+        N_estado: positive := 3;
         C1 : integer := 3;
         C2 : integer := 5;
         C3 : integer := 1;
@@ -51,7 +52,7 @@ entity maquina_paso is
         --ELEMENTOS NECESARIOS PARA EL FUNCIONAMIENTO BÁSICO DE LOS SEMÁFOROS
         boton: in STD_LOGIC;
         Sem3: out STD_LOGIC_VECTOR (N_luces - 1 downto 0);
-        Sem_peatones: out STD_LOGIC_VECTOR (N_luces_peat - 1 downto 0);
+        Sem_peat: out STD_LOGIC_VECTOR (N_luces_peat - 1 downto 0);
         
         --ELEMENTOS NECESARIOS PARA EL FUNCIONAMIENTO DE LA CUENTA ATRÁS
         display: out STD_LOGIC_VECTOR (N_segmentos - 1 downto 0)        
@@ -65,6 +66,21 @@ architecture Behavioral of maquina_paso is
 TYPE state_paso IS (S0, S1, S2, S3, S4);
 SIGNAL estado_paso, nextstate_paso: state_paso;
 
+signal estado: std_logic_vector (N_estado - 1 downto 0);
+
+component SEM_CARRETERA_PPAL
+    port (
+    estado: in std_logic_vector(2 downto 0);
+    sem: out std_logic_vector (2 downto 0)
+    );
+end component;
+
+component SEM_PEATONES
+    port (
+    estado: in std_logic_vector(2 downto 0);
+    sem: out std_logic_vector (1 downto 0)    
+    );
+end component;
 
 --Declaración componente de divisor de frecuencia
 component divisor_frecuencia
@@ -78,8 +94,8 @@ component divisor_frecuencia
 end component;
 
 --señales y constantes necesariaspara los temporizadores y cuantas atrás síncronas
-constant module_prescaler: positive :=  1000000000 / 100; -- 100MHz -> 100Hz
-constant module_timer: positive :=  100 / 1; -- 100Hz -> 1Hz
+constant module_prescaler: positive :=  1000000000 / 10000000; -- 100MHz -> 100Hz
+constant module_timer: positive :=  10000000 / 1000000; -- 100Hz -> 1Hz
 
 signal clk1Hz, clk100Hz: STD_LOGIC;
 
@@ -115,6 +131,18 @@ signal boton_sinc: std_logic := '0';
 signal boton_dev: std_logic := '0';
 
 begin
+
+SEM3_DECODE: SEM_CARRETERA_PPAL
+    port map (    
+        estado => estado,
+        sem => Sem3
+    ); 
+
+SEM_PEATONES_DECODE: SEM_PEATONES
+    port map (
+        estado => estado,
+        sem => Sem_peat
+    );
 
 mod_sync: modulo_sincronizacion 
 PORT MAP (  
@@ -154,44 +182,29 @@ Decoder_7_segmentos: decodificador_7_segm
       code => code,
       led => display
     );
-
-SYNC_PROC: PROCESS (clk, reset)
-begin
-        if reset = '1' then
-            estado_paso <= S0;
-            nextstate_paso <= S0;
-        end if;
-END PROCESS;
-
-SEM3_DECODE: PROCESS (estado_paso)
+ 
+--PROCESOS    
+ESTADO_DECODE: PROCESS (estado_paso)
 begin
     case (estado_paso) is
-        when S0 => Sem3 <= "100";
-        when S1 => Sem3 <= "010";
-        when S2 => Sem3 <= "001";
-        when S3 => Sem3 <= "001";
-        when S4 => Sem3 <= "100";
-        when others => Sem3 <= "100";
+        when S0 => estado <= "000";
+        when S1 => estado <= "001";
+        when S2 => estado <= "010";
+        when S3 => estado <= "011";
+        when S4 => estado <= "100";
+        when others => estado <= "000";
     end case;
 END PROCESS;
 
-SEM_PEATONES_DECODE: PROCESS(estado_paso)
-begin
-    case (estado_paso) is
-        when S0 => Sem_peatones <= "01";
-        when S1 => Sem_peatones <= "01";
-        when S2 => Sem_peatones <= "10";
-        when S3 => Sem_peatones <= "01";
-        when S4 => Sem_peatones <= "01";
-        when others => Sem_peatones <= "01";
-    end case;
-END PROCESS;
 
-NEXT_STATE_PASO_DECODE: PROCESS(clk1Hz, boton, clk, estado_paso)
+NEXT_STATE_PASO_DECODE: PROCESS(reset, boton, clk, estado_paso)
 variable count: integer := 0;
 begin
     
-    if estado_paso = S0 then
+    if reset ='1' then
+        nextstate_paso <= S0;
+    
+    elsif estado_paso = S0 then
         if boton_dev'event and boton_dev = '1' then
             nextstate_paso <= S1;
             count := C1;
@@ -224,9 +237,9 @@ begin
                 code <= "0000";
          end case;  
          
-         if rising_edge(clk1Hz) then
-         count := count - 1;
-          end if;
+        if rising_edge(clk1Hz) then
+            count := count - 1;
+        end if;
         if count = 0 then
             nextstate_paso <= S3;        
             count := C3;
@@ -243,7 +256,7 @@ begin
         
     elsif estado_paso = S4 then          
         if rising_edge(clk1Hz) then
-         count := count - 1;         
+            count := count - 1;         
         end if;
         if count = 0 then
             nextstate_paso <= S0;
@@ -255,9 +268,7 @@ begin
     end if;    
     
     estado_paso <= nextstate_paso;  
-     
-
-     
+        
 END PROCESS;
 
 

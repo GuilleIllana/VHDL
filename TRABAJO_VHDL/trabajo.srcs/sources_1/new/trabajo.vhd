@@ -73,7 +73,7 @@ component maquina_paso
         clk: in STD_LOGIC;
         boton: in STD_LOGIC;
         Sem3: out STD_LOGIC_VECTOR (N_luces - 1 downto 0);
-        Sem_peatones: out STD_LOGIC_VECTOR (N_luces_peat - 1 downto 0);
+        Sem_peat: out STD_LOGIC_VECTOR (N_luces_peat - 1 downto 0);
         display: out STD_LOGIC_VECTOR (N_segmentos - 1 downto 0)
   );
 end component;
@@ -97,7 +97,7 @@ MAQUINA_SEMAFORO_PASO: maquina_paso
         clk => clk,
         boton => boton,
         Sem3 => Sem3,
-        Sem_peatones => Sem_peatones,
+        Sem_peat => Sem_peatones,
         display => display
     );
 

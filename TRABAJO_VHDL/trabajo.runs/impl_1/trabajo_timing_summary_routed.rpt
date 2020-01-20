@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sat Jan 18 16:31:05 2020
+| Date         : Sun Jan 19 17:20:52 2020
 | Host         : LAPTOP-CG3U7DTI running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file trabajo_timing_summary_routed.rpt -pb trabajo_timing_summary_routed.pb -rpx trabajo_timing_summary_routed.rpx -warn_on_violation
 | Design       : trabajo
@@ -53,7 +53,287 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 0 register/latch pins with no clock.
+ There are 18 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+ There are 71 register/latch pins with no clock driven by root clock pin: reset (HIGH)
+
+ There are 33 register/latch pins with no clock driven by root clock pin: sensor (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/PRESCALER/clk_state_reg/Q (HIGH)
+
+ There are 64 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/TIMER/clk_state_reg/Q (HIGH)
+
+ There are 29 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[0]_C/Q (HIGH)
+
+ There are 29 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[0]_LDC/Q (HIGH)
+
+ There are 29 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[0]_P/Q (HIGH)
+
+ There are 21 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[10]_C/Q (HIGH)
+
+ There are 21 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[10]_LDC/Q (HIGH)
+
+ There are 21 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[10]_P/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[11]_C/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[11]_LDC/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[11]_P/Q (HIGH)
+
+ There are 19 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[12]_C/Q (HIGH)
+
+ There are 19 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[12]_LDC/Q (HIGH)
+
+ There are 19 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[12]_P/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[13]_C/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[13]_LDC/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[13]_P/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[14]_C/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[14]_LDC/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[14]_P/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[15]_C/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[15]_LDC/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[15]_P/Q (HIGH)
+
+ There are 15 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[16]_C/Q (HIGH)
+
+ There are 15 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[16]_LDC/Q (HIGH)
+
+ There are 15 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[16]_P/Q (HIGH)
+
+ There are 14 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[17]_C/Q (HIGH)
+
+ There are 14 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[17]_LDC/Q (HIGH)
+
+ There are 14 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[17]_P/Q (HIGH)
+
+ There are 13 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[18]_C/Q (HIGH)
+
+ There are 13 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[18]_LDC/Q (HIGH)
+
+ There are 13 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[18]_P/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[19]_C/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[19]_LDC/Q (HIGH)
+
+ There are 12 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[19]_P/Q (HIGH)
+
+ There are 29 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[1]_C/Q (HIGH)
+
+ There are 29 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[1]_LDC/Q (HIGH)
+
+ There are 29 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[1]_P/Q (HIGH)
+
+ There are 11 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[20]_C/Q (HIGH)
+
+ There are 11 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[20]_LDC/Q (HIGH)
+
+ There are 11 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[20]_P/Q (HIGH)
+
+ There are 10 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[21]_C/Q (HIGH)
+
+ There are 10 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[21]_LDC/Q (HIGH)
+
+ There are 10 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[21]_P/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[22]_C/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[22]_LDC/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[22]_P/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[23]_C/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[23]_LDC/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[23]_P/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[24]_C/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[24]_LDC/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[24]_P/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[25]_C/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[25]_LDC/Q (HIGH)
+
+ There are 6 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[25]_P/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[26]_C/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[26]_LDC/Q (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[26]_P/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[27]_C/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[27]_LDC/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[27]_P/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[28]_C/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[28]_LDC/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[28]_P/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[29]_C/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[29]_LDC/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[29]_P/Q (HIGH)
+
+ There are 30 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[2]_C/Q (HIGH)
+
+ There are 30 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[2]_LDC/Q (HIGH)
+
+ There are 30 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[2]_P/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[30]_C/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[30]_LDC/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[30]_P/Q (HIGH)
+
+ There are 28 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[3]_C/Q (HIGH)
+
+ There are 28 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[3]_LDC/Q (HIGH)
+
+ There are 28 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[3]_P/Q (HIGH)
+
+ There are 27 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[4]_C/Q (HIGH)
+
+ There are 27 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[4]_LDC/Q (HIGH)
+
+ There are 27 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[4]_P/Q (HIGH)
+
+ There are 26 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[5]_C/Q (HIGH)
+
+ There are 26 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[5]_LDC/Q (HIGH)
+
+ There are 26 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[5]_P/Q (HIGH)
+
+ There are 25 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[6]_C/Q (HIGH)
+
+ There are 25 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[6]_LDC/Q (HIGH)
+
+ There are 25 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[6]_P/Q (HIGH)
+
+ There are 24 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[7]_C/Q (HIGH)
+
+ There are 24 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[7]_LDC/Q (HIGH)
+
+ There are 24 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[7]_P/Q (HIGH)
+
+ There are 27 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[8]_C/Q (HIGH)
+
+ There are 23 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[8]_LDC/Q (HIGH)
+
+ There are 27 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[8]_P/Q (HIGH)
+
+ There are 26 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[9]_C/Q (HIGH)
+
+ There are 22 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[9]_LDC/Q (HIGH)
+
+ There are 26 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/count[9]_P/Q (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/nextstate_cruce_reg[0]/Q (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/nextstate_cruce_reg[1]/Q (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_CRUCE/nextstate_cruce_reg[2]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/PRESCALER/clk_state_reg/Q (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/TIMER/clk_state_reg/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[0]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[10]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[11]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[12]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[13]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[14]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[15]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[16]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[17]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[18]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[19]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[1]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[20]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[21]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[22]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[23]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[24]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[25]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[26]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[27]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[28]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[29]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[2]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[30]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[31]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[3]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[4]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[5]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[6]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[7]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[8]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/count_reg[9]/Q (HIGH)
+
+ There are 34 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/mod_debouncer/Q1_reg/Q (HIGH)
+
+ There are 34 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/mod_debouncer/Q2_reg/Q (HIGH)
+
+ There are 34 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/mod_debouncer/Q3_reg/Q (HIGH)
+
+ There are 36 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[0]_C/Q (HIGH)
+
+ There are 35 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[1]_LDC/Q (HIGH)
+
+ There are 36 register/latch pins with no clock driven by root clock pin: MAQUINA_SEMAFORO_PASO/nextstate_paso_reg[1]_P/Q (HIGH)
 
 
 2. checking constant_clock
@@ -68,21 +348,21 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 0 pins that are not constrained for maximum delay.
+ There are 332 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 0 input ports with no input delay specified.
+ There are 3 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
 6. checking no_output_delay
 ---------------------------
- There are 0 ports with no output delay specified.
+ There are 18 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -116,7 +396,7 @@ Table of Contents
 
 12. checking latch_loops
 ------------------------
- There are 0 combinational latch loops in the design through latch input
+ There are 3 combinational latch loops in the design through latch input (HIGH)
 
 
 

@@ -1,0 +1,96 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Jan 19 13:00:19 2020
+# Process ID: 19228
+# Current directory: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18200 C:\Users\Aitana\Desktop\trabajo_vhdl\VHDL\TRABAJO_VHDL\trabajo.xpr
+# Log file: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/vivado.log
+# Journal file: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 724.645 ; gain = 131.418
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+[Sun Jan 19 13:07:54 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.runs/synth_1/runme.log
+[Sun Jan 19 13:07:55 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.205 . Memory (MB): peak = 1644.484 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.206 . Memory (MB): peak = 1644.484 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1644.484 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1820.762 ; gain = 1078.512
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+reset_run impl_1
+launch_runs impl_1 -jobs 4
+[Sun Jan 19 13:14:17 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.runs/impl_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.125 . Memory (MB): peak = 1856.559 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.126 . Memory (MB): peak = 1856.559 ; gain = 0.000
+refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1926.965 ; gain = 75.363
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+[Sun Jan 19 13:18:22 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.runs/synth_1/runme.log
+[Sun Jan 19 13:18:22 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Aitana/Desktop/trabajo_vhdl/VHDL/TRABAJO_VHDL/trabajo.runs/impl_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.129 . Memory (MB): peak = 2499.641 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.129 . Memory (MB): peak = 2499.641 ; gain = 0.000
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2499.641 ; gain = 16.984
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+write_schematic -format pdf -orientation portrait C:/Users/Aitana/Desktop/schematic.pdf
+C:/Users/Aitana/Desktop/schematic.pdf
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 19 14:29:24 2020...

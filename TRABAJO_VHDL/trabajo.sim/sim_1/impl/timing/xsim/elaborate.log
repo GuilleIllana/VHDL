@@ -11,7 +11,9 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling module xil_defaultlib.glbl
-Compiling architecture behavioral of entity xil_defaultlib.divisor_frecuencia [divisor_frecuencia_default]
+Compiling architecture behavioral of entity xil_defaultlib.divisor_frecuencia [\divisor_frecuencia(module=10)\]
+Compiling architecture behavioral of entity xil_defaultlib.SEM_CARRETERA_PPAL [sem_carretera_ppal_default]
+Compiling architecture behavioral of entity xil_defaultlib.SEM_CRUCE [sem_cruce_default]
 Compiling architecture behavioral of entity xil_defaultlib.maquina_cruce [maquina_cruce_default]
 Compiling architecture behavioral of entity xil_defaultlib.simmaquinacruce
 Built simulation snapshot simMaquinaCruce_time_impl
